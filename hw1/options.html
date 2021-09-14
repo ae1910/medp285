@@ -27,7 +27,7 @@
 					<tr>
 						<td>
 							<form>
-								<input type="checkbox" checked onclick="newWindow('options/checkboxes.html')">
+								<input type="checkbox" checked>
 								<input type="text" size="13" value="BOXES">
 							</form>
 						</td>
@@ -111,27 +111,31 @@
 						</td>
 						<td> </td>
 						<td valign="bottom">
-							<select name="a" size="4" multiple>
-								<option value="How about this one?"> </option>
-								<option selected value="This one?"> </option>
-								<option value="Nah, this one, right?"> </option>
-								<option value="Or this one?"> </option>
-							</select>
+							<form>
+								<select name="a" size="4" multiple>
+									<option value="How about this one?"> </option>
+									<option selected value="This one?"> </option>
+									<option value="Nah, this one, right?"> </option>
+									<option value="Or this one?"> </option>
+								</select>
+							</form>
 						</td>
 					</tr>
 					<tr>
 						<td align="right" valign="top">
-							<input type="checkbox" selected>
-							<input type="checkbox">
-							<input type="checkbox">
-							<br>
-							<input type="checkbox">
-							<input type="checkbox">
-							<input type="checkbox">
-							<br>
-							<input type="checkbox">
-							<input type="checkbox">
-							<input type="checkbox" selected>
+							<form>
+								<input type="checkbox" selected>
+								<input type="checkbox">
+								<input type="checkbox">
+								<br>
+								<input type="checkbox">
+								<input type="checkbox">
+								<input type="checkbox">
+								<br>
+								<input type="checkbox">
+								<input type="checkbox">
+								<input type="checkbox" selected>
+							</form>
 						</td>
 						<td>
 							<form>
@@ -162,9 +166,53 @@
 							</form>
 						</td>
 						<td>
-							<textarea rows="1" col="7"> </textarea>
-							<br>
-							<input type="checkbox">
+							<form>
+								<textarea rows="1" col="7"> </textarea>
+								<br>
+								<input type="checkbox">
+							</form>
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom">
+							<form action="options/checkboxes">
+								<input type="button" value="                 ">
+							</form>
+						</td>
+						<td align="right" valign="bottom">
+							<form>
+								<table>
+									<tbody>
+										<tr>
+											<td>
+												<textarea rows="2" col="1"> </textarea>
+											</td>
+											<td> </td>
+											<td>
+												<textarea rows="2" col="1"> </textarea>
+											</td>
+										</tr>
+										<tr>
+											<td> </td>
+											<td>
+												<textarea rows="2" col="1"> </textarea>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<input type="button" value="                      ">
+							</form>
+						</td>
+						<td align="center">
+							<form>
+								<input type="text" value="                        ">
+								<br>
+								<input type="text" value="                        ">
+								<br>
+								<input type="text" value="                        ">
+								<br>
+								<input type="text" value="                        ">
+							</form>
 						</td>
 					</tr>
 				</tbody>
