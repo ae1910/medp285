@@ -17,7 +17,6 @@
 			width: 100%;
 			height: 100vh;
 			background: #121212;
-			overflow: hidden;
 		}
 		div.logo{
 			position: absolute;
@@ -30,31 +29,61 @@
 		.container-left {
 			position: absolute;
 			width: 50%;
-			height: 600%;
-			display: flex;
+			height: 100vh;
 		}
 		.container-right {
 			position: absolute;
 			width: 50%;
-			height: 600%;
+			height: 100vh;
 			left: 50%;
-			display: flex;
 		}
-		.slide{
-			width: 20%;
-			transition: 2.5s;
-		}
-		.slideb{
-			width: 20%;
-			transition: 2s;
-		}
-		.slide img{
+		#slider {
+			position: relative;
 			width: 100%;
 			height: 100vh;
+			overflow: hidden;
 		}
-		.slideb img{
+		#slider ul {
+			position: relative;
+			list-style: none;
+			height: 100%;
+			width: 10000%;
+			padding: 0;
+			margin: 0;
+			transition: all 750ms ease;
+			left: 0;
+		}
+		#slider ul li {
+			position: relative;
+			width: 100%;
+			float: left;
+		}
+		#slider ul li img{
+			width: 100%;
+		}
+		#sliderb {
+			position: relative;
 			width: 100%;
 			height: 100vh;
+			overflow: hidden;
+		}
+		#sliderb ul {
+			position: relative;
+			list-style: none;
+			height: 10000%;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			transition: all 800ms ease;
+			left: 0;
+		}
+		#sliderb ul li {
+			position: relative;
+			width: 100%;
+			float: left;
+		}
+		#sliderb ul li img{
+			width: 100%;
 		}
 	</style>
 	
@@ -62,39 +91,70 @@
 		<div class="container">
 			<div class="logo">Plant Collection.</div>
 			<div class="container-left">
-				<div class="slide first">
-					<img src="img/plant1.jpg" alt="">
-				</div>
-				<div class="slide">
-					<img src="img/plant2.jpg" alt="">
-				</div>
-				<div class="slide">
-					<img src="img/plant3.jpg" alt="">
-				</div>
-				<div class="slide">
-					<img src="img/plant4.jpg" alt="">
-				</div>
-				<div class="slide">
-					<img src="img/plant5.jpg" alt="">
+				<div id="slider">
+					<ul>
+						<li>
+							<img src="img/plant1.jpg" alt="">
+						</li>
+						<li>
+							<img src="img/plant2.jpg" alt="">
+						</li>
+						<li>
+							<img src="img/plant3.jpg" alt="">
+						</li>
+						<li>
+							<img src="img/plant4.jpg" alt="">
+						</li>
+						<li>
+							<img src="img/plant5.jpg" alt="">
+						</li>
+					</ul>
 				</div>
 			</div>
 			<div class="container-right">
-				<div class="slideb first">
-					<img src="img/plant1cu.jpg" alt="">
-				</div>
-				<div class="slideb">
-					<img src="img/plant2cu.jpg" alt="">
-				</div>
-				<div class="slideb">
-					<img src="img/plant3cu.jpg" alt="">
-				</div>
-				<div class="slideb">
-					<img src="img/plant4cu.jpg" alt="">
-				</div>
-				<div class="slideb">
-					<img src="img/plant5cu.jpg" alt="">
+				<div id="sliderb">
+					<ul>
+						<li>
+							<img src="img/plant1cu.jpg" alt="">
+						</li>
+						<li>
+							<img src="img/plant2cu.jpg" alt="">
+						</li>
+						<li>
+							<img src="img/plant3cu.jpg" alt="">
+						</div>
+						<li>
+							<img src="img/plant4cu.jpg" alt="">
+						</li>
+						<li>
+							<img src="img/plant5cu.jpg" alt="">
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
+		<script>
+			// create variable to index the slides - to track
+			var slideIndex = 0;
+			// call a function that does something with the slides
+			showSlides();
+
+			function showSlides() {
+			    // a variable to be used with the for loop
+			    var i;
+			    // target the slides in the DOM as slides
+			    var slides = document.getElementsByClassName("slide");
+			    // loop through the slides showing them one at a time (display)
+			    for (i = 0; i < slides.length; i++) {
+			       slides[i].style.display = "none";
+			    }
+			    // increment the slides from 0 to the total number of slides (for loop)
+			    slideIndex++;
+			    // loop back to the beginning
+			    if (slideIndex > slides.length) {slideIndex = 1}
+			    slides[slideIndex-1].style.display = "block";
+			    setTimeout(showSlides, 3000); // Change image every 2 seconds
+			}
+		</script>
 	</body>
 </html>
