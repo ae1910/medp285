@@ -31,12 +31,33 @@
 			position: absolute;
 			width: 50%;
 			height: 100vh;
+			top: 0;
+			left: 0;
+		}
+		.container-left > div {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			deisplay: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
 		}
 		.container-right {
 			position: absolute;
 			width: 50%;
-			height: 100vh;
+			height: 100%;
+			top:0;
 			left: 50%;
+		}
+		.container-right > div{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			deisplay: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
 		}
 	</style>
 	
@@ -61,24 +82,20 @@
 				</div>
 			</div>
 			<div class="container-right">
-				<div id="sliderb">
-					<ul>
-						<li>
-							<img src="img/plant1cu.jpg" alt="">
-						</li>
-						<li>
-							<img src="img/plant2cu.jpg" alt="">
-						</li>
-						<li>
-							<img src="img/plant3cu.jpg" alt="">
-						</div>
-						<li>
-							<img src="img/plant4cu.jpg" alt="">
-						</li>
-						<li>
-							<img src="img/plant5cu.jpg" alt="">
-						</li>
-					</ul>
+				<div>
+					<img src="img/plant1cu.jpg" alt="">
+				</div>
+				<div>
+					<img src="img/plant2cu.jpg" alt="">
+				</div>
+				<div>
+					<img src="img/plant3cu.jpg" alt="">
+				</div>
+				<div>
+					<img src="img/plant4cu.jpg" alt="">
+				</div>
+				<div>
+					<img src="img/plant5cu.jpg" alt="">
 				</div>
 			</div>
 		</div>
