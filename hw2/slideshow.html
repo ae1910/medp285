@@ -63,7 +63,6 @@
 	
 	<body>
 		<div class="container">
-			<div class="logo">Plant Collection.</div>
 			<div class="container-left">
 				<div style = "background-image: url('img/plant1.jpg');"> </div>
 				<div style = "background-image: url('img/plant2.jpg');"> </div>
@@ -71,6 +70,7 @@
 				<div style = "background-image: url('img/plant4.jpg');"> </div>
 				<div style = "background-image: url('img/plant5.jpg');"> </div>
 			</div>
+			<div class="logo">Plant Collection.</div>
 			<div class="container-right">
 				<div style = "background-image: url('img/plant5cu.jpg');"> </div>
 				<div style = "background-image: url('img/plant4cu.jpg');"> </div>
@@ -87,7 +87,7 @@
 			var slideLeft = document.querySelectior('.container-left');
 			var count = 1;
 			var slidesLength = slideLeft.querySelectiorAll('div').length;
-			var sliderHeight = sliderContainer.clientHeight;
+			var sliderHeight = slideContainer.clientHeight;
 			
 			let activeSlideIndex = 0;
 			
@@ -99,7 +99,7 @@
 			
 			var nextSlide = function() {
 				if(count < slidesLength) {
-					slideLeft.style.transform = `translateY(${activeSlideIndex * sliderHeight}px)`;
+					slideLeft.style.transform = translateY(${activeSlideIndex * sliderHeight}px);
 					count++;
 				}
 				else if(count = slidesLength) {
@@ -110,7 +110,7 @@
 			
 			var nextSlideb = function() {
 				if(count < slidesLength) {
-					slideRight.style.transform = `translateY(-${activeSlideIndex * sliderHeight}px)`;
+					slideRight.style.transform = translateY(-${activeSlideIndex * sliderHeight}px);
 					count++;
 				}
 				else if(count = slidesLength) {
