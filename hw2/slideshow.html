@@ -33,6 +33,7 @@
 			height: 100vh;
 			top: 0;
 			left: 0;
+			transition: transform .5s ease-in-out;
 		}
 		.container-left > div {
 			position: absolute;
@@ -48,6 +49,7 @@
 			height: 100%;
 			top:0;
 			left: 50%;
+			transition: transform .5s ease-in-out;
 		}
 		.container-right > div{
 			position: absolute;
@@ -70,34 +72,70 @@
 				<div style = "background-image: url('img/plant5.jpg');"> </div>
 			</div>
 			<div class="container-right">
-				<div style = "background-image: url('img/plant1cu.jpg');"> </div>
-				<div style = "background-image: url('img/plant2cu.jpg');"> </div>
-				<div style = "background-image: url('img/plant3cu.jpg');"> </div>
-				<div style = "background-image: url('img/plant4cu.jpg');"> </div>
 				<div style = "background-image: url('img/plant5cu.jpg');"> </div>
+				<div style = "background-image: url('img/plant4cu.jpg');"> </div>
+				<div style = "background-image: url('img/plant3cu.jpg');"> </div>
+				<div style = "background-image: url('img/plant2cu.jpg');"> </div>
+				<div style = "background-image: url('img/plant1cu.jpg');"> </div>
 			</div>
 		</div>
 		<script>
-			// create variable to index the slides - to track
-			var slideIndex = 0;
-			// call a function that does something with the slides
-			showSlides();
+			var responsiveSlider = function() {
+			var slideContainer = document.querySelectior('.container');
+			var sliderLength = slideContainer.offsetLength;
+			var slideRight = document.querySelectior('.container-right');
+			var slideLeft = document.querySelectior('.container-left');
+			var count = 1;
+			var slidesLength = slideLeft.querySelectiorAll('div').length;
+			
+			let activeSlideIndex = 0;
+			
+			slideLeft.style.top = '-${(slideLength - 1) * 100}vh;
+			
+			window.addEventListener('resize', function() {
+				sliderLength = slideContainer.offsetLength;
+			});
+			
+			var nextSlide = function() {
+				if(count < slidesLength) {
+					slideList.style.left = "-" + count * sliderLength + "px";
+					count++;
+				}
+				else if(count = slidesLength) {
+					slideList.style.left = "0px";
+					count = 1;
+				}
+			};
+			
+			var prevSlide = function() {
+				if(count > 1) {
+					count = count - 2;
+					slideRight.style.left = "-" + count * sliderLength + "px";
+					count++;
+				}
+				else if(count = 1) {
+					count = slidesLength - 1;
+					slideRight.style.left = "-" + count * sliderLength + "px";
+					count++;
+				}
+			};
 
-			function showSlides() {
-			    // a variable to be used with the for loop
-			    var i;
-			    // target the slides in the DOM as slides
-			    var slides = document.getElementsByClassName("slide");
-			    // loop through the slides showing them one at a time (display)
-			    for (i = 0; i < slides.length; i++) {
-			       slides[i].style.display = "none";
-			    }
-			    // increment the slides from 0 to the total number of slides (for loop)
-			    slideIndex++;
-			    // loop back to the beginning
-			    if (slideIndex > slides.length) {slideIndex = 1}
-			    slides[slideIndex-1].style.display = "block";
-			    setTimeout(showSlides, 3000); // Change image every 2 seconds
+			
+			slideRight.style.transform = 'translateY(-${
+				activeSlideIndex * sliderHeight
+			}px)';
+			slideLeft.style.transform = 'translateY(${
+				activeSlideIndex * sliderHeight
+			}px)';
+			
+			setInterval(function() {
+				nextSlide()
+			}, 8000);
+
+			};
+			
+			window.onload = function() {
+			responsiveSlider();  
 			}
 		</script>
 	</body>
