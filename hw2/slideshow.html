@@ -25,7 +25,8 @@
 			font-weight: 800;
 			font-style: normal;
 			font-size: 3em;
-			margin: 1.2em;
+			margin: 4vw;
+			color: white;
 		}
 		.container-left {
 			position: absolute;
@@ -70,7 +71,6 @@
 				<div style = "background-image: url('img/plant4.jpg');"> </div>
 				<div style = "background-image: url('img/plant5.jpg');"> </div>
 			</div>
-			<div class="logo">Plant Collection.</div>
 			<div class="container-right">
 				<div style = "background-image: url('img/plant5cu.jpg');"> </div>
 				<div style = "background-image: url('img/plant4cu.jpg');"> </div>
@@ -78,11 +78,12 @@
 				<div style = "background-image: url('img/plant2cu.jpg');"> </div>
 				<div style = "background-image: url('img/plant1cu.jpg');"> </div>
 			</div>
+			<div class="logo">Plant Collection.</div>
 		</div>
 		<script>
 			var responsiveSlider = function() {
 			var slideContainer = document.querySelectior('.container');
-			var sliderLength = slideContainer.offsetLength;
+			var sliderWidth = slideContainer.offsetWidth;
 			var slideRight = document.querySelectior('.container-right');
 			var slideLeft = document.querySelectior('.container-left');
 			var count = 1;
@@ -94,7 +95,7 @@
 			slideLeft.style.top = '-${(slideLength - 1) * 100}vh;
 			
 			window.addEventListener('resize', function() {
-				sliderLength = slideContainer.offsetLength;
+				sliderWidth = slideContainer.offsetWidth;
 			});
 			
 			var nextSlide = function() {
