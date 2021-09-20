@@ -7,11 +7,54 @@
 	</head>
 	
 	<style>
+		body{
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100vh;
+		}
+		.container {
+			width: 100%;
+			height: 100vh;
+			background: #121212;
+			overflow: hidden;
+		}
 		div.logo{
 			font-family: swear-display,serif;
 			font-weight: 800;
 			font-style: normal;
-			font-size: 3em
+			font-size: 3em;
+			position: absolute;
+			margin: 1.2em;
+		}
+		.container-left {
+			position: absolute;
+			width: 50%;
+			height: 600%;
+			display: flex;
+		}
+		.container-right {
+			position: absolute;
+			width: 50%;
+			height: 600%;
+			left: 50%;
+			display: flex;
+		}
+		.slide{
+			width: 20%;
+			transition: 2.5s;
+		}
+		.slideb{
+			width: 20%;
+			transition: 2s;
+		}
+		.slide img{
+			width: 100%;
+			height: 100vh;
+		}
+		.slideb img{
+			width: 100%;
+			height: 100vh;
 		}
 	</style>
 	
@@ -20,42 +63,36 @@
 			<div class="logo">Plant Collection.</div>
 			<div class="container-left">
 				<div class="slide first">
-					<img src="1.jpg" alt="">
+					<img src="img/1.jpg" alt="">
 				</div>
 				<div class="slide">
-					<img src="1.jpg" alt="">
+					<img src="img/1.jpg" alt="">
 				</div>
 				<div class="slide">
-					<img src="1.jpg" alt="">
+					<img src="img/1.jpg" alt="">
 				</div>
 				<div class="slide">
-					<img src="1.jpg" alt="">
+					<img src="img/1.jpg" alt="">
 				</div>
 				<div class="slide">
-					<img src="1.jpg" alt="">
-				</div>
-				<div class="slide">
-					<img src="1.jpg" alt="">
+					<img src="img/1.jpg" alt="">
 				</div>
 			</div>
 			<div class="container-right">
-				<div class="slide b first">
-					<img src="1.jpg" alt="">
+				<div class="slideb first">
+					<img src="img/1.jpg" alt="">
 				</div>
-				<div class="slide b">
-					<img src="1.jpg" alt="">
+				<div class="slideb">
+					<img src="img/1.jpg" alt="">
 				</div>
-				<div class="slide b">
-					<img src="1.jpg" alt="">
+				<div class="slideb">
+					<img src="img/1.jpg" alt="">
 				</div>
-				<div class="slide b">
-					<img src="1.jpg" alt="">
+				<div class="slideb">
+					<img src="img/1.jpg" alt="">
 				</div>
-				<div class="slide b">
-					<img src="1.jpg" alt="">
-				</div>
-				<div class="slide b">
-					<img src="1.jpg" alt="">
+				<div class="slideb">
+					<img src="img/1.jpg" alt="">
 				</div>
 			</div>
 		</div>
