@@ -87,6 +87,7 @@
 			var slideLeft = document.querySelectior('.container-left');
 			var count = 1;
 			var slidesLength = slideLeft.querySelectiorAll('div').length;
+			var sliderHeight = sliderContainer.clientHeight;
 			
 			let activeSlideIndex = 0;
 			
@@ -98,39 +99,36 @@
 			
 			var nextSlide = function() {
 				if(count < slidesLength) {
-					slideList.style.left = "-" + count * sliderLength + "px";
+					slideLeft.style.transform = `translateY(${activeSlideIndex * sliderHeight}px)`;
 					count++;
 				}
 				else if(count = slidesLength) {
-					slideList.style.left = "0px";
+					slideLeft.style.left = "0px";
 					count = 1;
 				}
 			};
 			
-			var prevSlide = function() {
-				if(count > 1) {
-					count = count - 2;
-					slideRight.style.left = "-" + count * sliderLength + "px";
+			var nextSlideb = function() {
+				if(count < slidesLength) {
+					slideRight.style.transform = `translateY(-${activeSlideIndex * sliderHeight}px)`;
 					count++;
 				}
-				else if(count = 1) {
-					count = slidesLength - 1;
-					slideRight.style.left = "-" + count * sliderLength + "px";
-					count++;
+				else if(count = slidesLength) {
+					slideLeft.style.left = "0px";
+					count = 1;
 				}
 			};
-
 			
-			slideRight.style.transform = 'translateY(-${
-				activeSlideIndex * sliderHeight
-			}px)';
-			slideLeft.style.transform = 'translateY(${
-				activeSlideIndex * sliderHeight
-			}px)';
+			
 			
 			setInterval(function() {
 				nextSlide()
-			}, 8000);
+			}, 5000);
+
+			};
+			setInterval(function() {
+				nextSlideb()
+			}, 5100);
 
 			};
 			
