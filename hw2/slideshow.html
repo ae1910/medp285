@@ -3,6 +3,8 @@
 	<head>
 		<meta name="creator" lang="en" content="Ana Edwards" /> 
 		<meta name="subject" lang="en" content="Plant Collection" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="https://use.typekit.net/jxu1xlm.css">
 	</head>
 	
@@ -33,64 +35,55 @@
 		}
 		.container-left {
 			position: absolute;
-			max-width: 50%;
-			height: 100vh;
+			width: 50%;
+			height: 100%;
 			top: 0;
 			left: 0;
 			overflow: hidden;
 		}
 		.container-right {
 			position: absolute;
-			max-width: 50%;
+			width: 50%;
 			height: 100%;
 			top:0;
 			left: 50%;
 			overflow: hidden;
-		}
-		/* Fading animation */
-		.fade {
-		  animation-name: fade;
-		  animation-duration: 1.5s;
-		}
-		@keyframes fade {
-		  from {opacity: .4}
-		  to {opacity: 1}
 		}
 	</style>
 	
 	<body>
 		<div class="container">
 			<div id="gallery1" class="container-left">
-				<div class="mySlides fade">
+				<div class="mySlides w3-animate-top">
 					<img src= "img/plant1.jpg" style="width:100%">
 				</div>
-				<div class="mySlides fade">
+				<div class="mySlides w3-animate-top">
 					<img src= "img/plant2.jpg" style="width:100%">
 				</div>
-				<div class="mySlides fade">
+				<div class="mySlides w3-animate-top">
 					<img src= "img/plant3.jpg" style="width:100%">
 				</div>
-				<div class="mySlides fade">
+				<div class="mySlides w3-animate-top">
 					<img src= "img/plant4.jpg" style="width:100%">
 				</div>
-				<div class="mySlides fade">
+				<div class="mySlides w3-animate-top">
 					<img src= "img/plant5.jpg" style="width:100%">
 				</div>
 			</div>
 			<div id="gallery2" class="container-right">
-				<div class="mySlidesb fade">
+				<div class="mySlidesb w3-animate-top">
 					<img src= "img/plant1cu.jpg" style="width:100%">
 				</div>
-				<div class="mySlidesb fade">
+				<div class="mySlidesb w3-animate-top">
 					<img src= "img/plant2cu.jpg" style="width:100%">
 				</div>
-				<div class="mySlidesb fade">
+				<div class="mySlidesb w3-animate-top">
 					<img src= "img/plant3cu.jpg;" style="width:100%">
 				</div>
-				<div class="mySlidesb fade">
+				<div class="mySlidesb w3-animate-top">
 					<img src= "img/plant4cu.jpg" style="width:100%">
 				</div>
-				<div class="mySlidesb fade">
+				<div class="mySlidesb w3-animate-top">
 					<img src= "img/plant5cu.jpg" style="width:100%">
 				</div>
 			</div>
@@ -99,22 +92,21 @@
 		<script>
 			var slideIndex = [1,1];
 			var slideId = ["mySlides", "mySlidesb"]
+			carousel(1, 0);
 			showDivs(1, 0);
 			showDivs(1, 1);
 
-			function plusDivs(n, no) {
-			  showDivs(slideIndex[no] += n, no);
-			}
 
-			function showDivs(n, no) {
-			  var i;
-			  var x = document.getElementsByClassName(slideId[no]);
-			  if (n > x.length) {slideIndex[no] = 1}
-			  if (n < 1) {slideIndex[no] = x.length}
-			  for (i = 0; i < x.length; i++) {
-			    x[i].style.display = "none";  
-			  }
-			  x[slideIndex[no]-1].style.display = "block";  
+			function carousel(n, no) {
+				var i;
+				var x = document.getElementsByClassName(slideId[no]);
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";  
+				}
+				slideIndex++;
+				if (slideIndex[no] > x.length) {slideIndex[no] = 1}    
+				x[slideIndex[no]-1].style.display = "block";  
+				setTimeout(carousel, 3000);
 			}
 		</script>
 	</body>
