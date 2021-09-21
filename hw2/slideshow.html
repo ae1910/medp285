@@ -9,19 +9,34 @@
 	</head>
 	
 	<style>
-		body{
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		html, body{
 			margin: 0;
 			padding: 0;
 			width: 100%;
-			height: auto;
+			height: 100vh;
 		}
 		.mySlides {
 			display:none;
 		}
 		.container {
-			width: auto;
+			width: 100%;
 			height: 100%;
 			position: relative;
+		}
+		.box {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 400px;
+		}
+		.box img {
+			width: 100%
 		}
 		div.logo{
 			position: absolute;
@@ -32,44 +47,41 @@
 			margin: 4vw;
 			color: white;
 		}
-		img {
-			horizontal-align: center;
-			vertical-align: middle;
-		}
-
 	</style>
 	
 	<body>
 		<div class="container">
-			<div class="mySlides w3-animate-top">
-				<img src= "img/plant1.jpg">
-			</div>
-			<div class="mySlides w3-animate-top">
-				<img src= "img/plant1cu.jpg">
-			</div>
-			<div class="mySlides w3-animate-top">
-				<img src= "img/plant2.jpg">
-			</div>
-			<div class="mySlides w3-animate-top">
-				<img src= "img/plant2cu.jpg">
-			</div>
-			<div class="mySlides w3-animate-top">
-				<img src= "img/plant3.jpg">
-			</div>
-			<div class="mySlides w3-animate-top">
-				<img src= "img/plant3cu.jpg">
-			</div>
-			<div class="mySlides w3-animate-top">
-				<img src= "img/plant4.jpg">
-			</div>
-			<div class="mySlides w3-animate-top">
-				<img src= "img/plant4cu.jpg">
-			</div>
-			<div class="mySlides w3-animate-top">
-				<img src= "img/plant5.jpg">
-			</div>
-			<div class="mySlides w3-animate-top">
-				<img src= "img/plant5cu.jpg">
+			<div class="box">
+				<div class="mySlides w3-animate-top">
+					<img src= "img/plant1.jpg">
+				</div>
+				<div class="mySlides w3-animate-top">
+					<img src= "img/plant1cu.jpg">
+				</div>
+				<div class="mySlides w3-animate-top">
+					<img src= "img/plant2.jpg">
+				</div>
+				<div class="mySlides w3-animate-top">
+					<img src= "img/plant2cu.jpg">
+				</div>
+				<div class="mySlides w3-animate-top">
+					<img src= "img/plant3.jpg">
+				</div>
+				<div class="mySlides w3-animate-top">
+					<img src= "img/plant3cu.jpg">
+				</div>
+				<div class="mySlides w3-animate-top">
+					<img src= "img/plant4.jpg">
+				</div>
+				<div class="mySlides w3-animate-top">
+					<img src= "img/plant4cu.jpg">
+				</div>
+				<div class="mySlides w3-animate-top">
+					<img src= "img/plant5.jpg">
+				</div>
+				<div class="mySlides w3-animate-top">
+					<img src= "img/plant5cu.jpg">
+				</div>
 			</div>
 			<div class="logo">Plant Collection.</div>
 		</div>
