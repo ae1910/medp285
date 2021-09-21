@@ -90,23 +90,19 @@
 			<div class="logo">Plant Collection.</div>
 		</div>
 		<script>
-			var slideIndex = [1,1];
-			var slideId = ["mySlides", "mySlidesb"]
-			carousel(1, 0);
-			showDivs(1, 0);
-			showDivs(1, 1);
+			var myIndex = 0;
+			carousel();
 
-
-			function carousel(n, no) {
-				var i;
-				var x = document.getElementsByClassName(slideId[no]);
-				for (i = 0; i < x.length; i++) {
-					x[i].style.display = "none";  
-				}
-				slideIndex++;
-				if (slideIndex[no] > x.length) {slideIndex[no] = 1}    
-				x[slideIndex[no]-1].style.display = "block";  
-				setTimeout(carousel, 3000);
+			function carousel() {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			}
+			myIndex++;
+			if (myIndex > x.length) {myIndex = 1}   
+			x[myIndex-1].style.display = "block";  
+			setTimeout(carousel, 2500);    
 			}
 		</script>
 	</body>
