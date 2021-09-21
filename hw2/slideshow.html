@@ -35,74 +35,45 @@
 		}
 		.container-left {
 			position: absolute;
-			width: 50%;
+			width: auto;
 			height: 100%;
-			top: 0;
-			left: 0;
-			overflow: hidden;
-		}
-		.container-right {
-			position: absolute;
-			width: 50%;
-			height: 100%;
-			top:0;
-			left: 50%;
 			overflow: hidden;
 		}
 		img {
 			vertical-align: middle;
 		}
-		.slideshowActive {
-			position:relative;
-		}
 
-		.slideshowActive .slideshow > * {
-			position:absolute;
-			left:0;
-			z-index:1;
-			opacity:0;
-			transition:opacity 0s 0.5s;
-		}
-
-		.slideshowActive .slideshow .current {
-			position:relative;
-			z-index:2;
-			opacity:1;
-			transition:opacity 0.5s;
-		}
 	</style>
 	
 	<body class="slideshowActive">
 		<div class="container">
-			<div id="slideshow" class="container-left" data-cycle="3000">
+			<div id="gallery" class="container-left">
 				<div class="mySlides w3-animate-top">
 					<img src= "img/plant1.jpg" style="width:100%">
+				</div>
+				<div class="mySlides w3-animate-top">
+					<img src= "img/plant1cu.jpg" style="width:100%">
 				</div>
 				<div class="mySlides w3-animate-top">
 					<img src= "img/plant2.jpg" style="width:100%">
 				</div>
 				<div class="mySlides w3-animate-top">
-					<img src= "img/plant3.jpg" style="width:100%">
-				</div>
-				<div class="mySlides w3-animate-top">
-					<img src= "img/plant4.jpg" style="width:100%">
-				</div>
-				<div class="mySlides w3-animate-top">
-					<img src= "img/plant5.jpg" style="width:100%">
-				</div>
-			</div>
-			<div id="slideshow" class="container-right" data-cycle="3100">
-				<div class="mySlides w3-animate-top">
-					<img src= "img/plant1cu.jpg" style="width:100%">
-				</div>
-				<div class="mySlides w3-animate-top">
 					<img src= "img/plant2cu.jpg" style="width:100%">
+				</div>
+				<div class="mySlides w3-animate-top">
+					<img src= "img/plant3.jpg" style="width:100%">
 				</div>
 				<div class="mySlides w3-animate-top">
 					<img src= "img/plant3cu.jpg;" style="width:100%">
 				</div>
 				<div class="mySlides w3-animate-top">
+					<img src= "img/plant4.jpg" style="width:100%">
+				</div>
+				<div class="mySlides w3-animate-top">
 					<img src= "img/plant4cu.jpg" style="width:100%">
+				</div>
+				<div class="mySlides w3-animate-top">
+					<img src= "img/plant5.jpg" style="width:100%">
 				</div>
 				<div class="mySlides w3-animate-top">
 					<img src= "img/plant5cu.jpg" style="width:100%">
@@ -111,34 +82,20 @@
 			<div class="logo">Plant Collection.</div>
 		</div>
 		<script>
-			(function(d) {
+			var myIndex = 0;
+			carousel();
 
-				d.body.classList.add('slideshowActive');
-
-				var
-					slideshowInterval = 2000;
-					slideshows = d.getElementsById('slideshow');
-
-				for (var i = 0, show; show = slideshows[i]; i++) {
-					show['data-slideshowCurrent'] = show.firstElementChild;
-					show.firstElementChild.classList.add('current');
-				}
-
-				function slideUpdate() {
-					for (var i = 0, show; show = slideshows[i]; i++) {
-						var current = show['data-slideshowCurrent']; 
-						current.classList.remove('current');
-						if (!(show['data-slideshowCurrent'] = current.nextElementSibling))
-							show['data-slideshowCurrent'] = show.firstElementChild;
-						show['data-slideshowCurrent'].classList.add('current');
-					}
-				}
-
-				window.addEventListener('load', function() {
-					setInterval(slideUpdate, slideshowInterval);
-				}, false);
-
-			})(document);
+			function carousel() {
+			  var i;
+			  var x = document.getElementsByClassName("mySlides");
+			  for (i = 0; i < x.length; i++) {
+			    x[i].style.display = "none";  
+			  }
+			  myIndex++;
+			  if (myIndex > x.length) {myIndex = 1}    
+			  x[myIndex-1].style.display = "block";  
+			  setTimeout(carousel, 3000);    
+			}
 		</script>
 	</body>
 </html>
