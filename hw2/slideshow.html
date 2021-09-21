@@ -92,7 +92,7 @@
 			
 			let activeSlideIndex = 0;
 			
-			slideLeft.style.top = '-${(slideLength - 1) * 100}vh;
+			slideLeft.style.top = `-${(slideLength - 1) * 100}vh`;
 			
 			window.addEventListener('resize', function() {
 				sliderWidth = slideContainer.offsetWidth;
@@ -112,7 +112,7 @@
 			var nextSlideb = function() {
 				if(count < slidesLength) {
 					slideRight.style.transform = translateY(-${activeSlideIndex * sliderHeight}px);
-					count++;
+					count--;
 				}
 				else if(count = slidesLength) {
 					slideLeft.style.left = "0px";
