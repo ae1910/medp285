@@ -26,7 +26,7 @@
 			font-style: normal;
 			font-size: 3em;
 			margin: 4vw;
-			color: #A0522D;
+			color: white;
 		}
 		.container-left {
 			position: absolute;
@@ -34,7 +34,6 @@
 			height: 100vh;
 			top: 0;
 			left: 0;
-			transition: transform .5s ease-in-out;
 		}
 		.container-left > div {
 			position: absolute;
@@ -50,7 +49,6 @@
 			height: 100%;
 			top:0;
 			left: 50%;
-			transition: transform .5s ease-in-out;
 		}
 		.container-right > div{
 			position: absolute;
@@ -60,81 +58,95 @@
 			background-size: cover;
 			background-position: center center;
 		}
+
+		/* Fading animation */
+		.fade {
+		  animation-name: fade;
+		  animation-duration: 1.5s;
+		}
+
+		@keyframes fade {
+		  from {opacity: .4}
+		  to {opacity: 1}
+		}
+
 	</style>
 	
 	<body>
 		<div class="container">
 			<div class="container-left">
-				<div style = "background-image: url('img/plant1.jpg');"> </div>
-				<div style = "background-image: url('img/plant2.jpg');"> </div>
-				<div style = "background-image: url('img/plant3.jpg');"> </div>
-				<div style = "background-image: url('img/plant4.jpg');"> </div>
-				<div style = "background-image: url('img/plant5.jpg');"> </div>
+				<div class="mySlides fade" style = "display:none">
+					<img src= "img/plant1.jpg">
+				</div>
+				<div class="mySlides fade" style = "display:none">
+					<img src= "img/plant2.jpg">
+				</div>
+				<div class="mySlides fade" style = "display:none">
+					<img src= "img/plant3.jpg">
+				</div>
+				<div class="mySlides fade" style = "display:none">
+					<img src= "img/plant4.jpg">
+				</div>
+				<div class="mySlides fade" style = "display:none">
+					<img src= "img/plant5.jpg">
+				</div>
 			</div>
 			<div class="container-right">
-				<div style = "background-image: url('img/plant5cu.jpg');"> </div>
-				<div style = "background-image: url('img/plant4cu.jpg');"> </div>
-				<div style = "background-image: url('img/plant3cu.jpg');"> </div>
-				<div style = "background-image: url('img/plant2cu.jpg');"> </div>
-				<div style = "background-image: url('img/plant1cu.jpg');"> </div>
+				<div class="mySlidesb fade" style = "display:none">
+					<img src= "img/plant1cu.jpg">
+				</div>
+				<div class="mySlidesb fade" style = "display:none">
+					<img src= "img/plant2cu.jpg">
+				</div>
+				<div class="mySlidesb fade" style = "display:none">
+					<img src= "img/plant3cu.jpg;">
+				</div>
+				<div class="mySlidesb fade" style = "display:none">
+					<img src= "img/plant4cu.jpg">
+				</div>
+				<div class="mySlidesb fade" style = "display:none">
+					<img src= "img/plant5cu.jpg">
+				</div>
 			</div>
 			<div class="logo">Plant Collection.</div>
 		</div>
 		<script>
-			var responsiveSlider = function() {
-			var slideContainer = document.querySelectior('.container');
-			var sliderWidth = slideContainer.offsetWidth;
-			var slideRight = document.querySelectior('.container-right');
-			var slideLeft = document.querySelectior('.container-left');
-			var count = 1;
-			var slidesLength = slideLeft.querySelectiorAll('div').length;
-			var sliderHeight = slideContainer.clientHeight;
-			
-			let activeSlideIndex = 0;
-			
-			slideLeft.style.top = `-${(slideLength - 1) * 100}vh`;
-			
-			window.addEventListener('resize', function() {
-				sliderWidth = slideContainer.offsetWidth;
-			});
-			
-			var nextSlide = function() {
-				if(count < slidesLength) {
-					slideLeft.style.transform = translateY(${activeSlideIndex * sliderHeight}px);
-					count++;
-				}
-				else if(count = slidesLength) {
-					slideLeft.style.left = "0px";
-					count = 1;
-				}
-			};
-			
-			var nextSlideb = function() {
-				if(count < slidesLength) {
-					slideRight.style.transform = translateY(-${activeSlideIndex * sliderHeight}px);
-					count--;
-				}
-				else if(count = slidesLength) {
-					slideLeft.style.left = "0px";
-					count = 1;
-				}
-			};
-			
-			
-			
-			setInterval(function() {
-				nextSlide()
-			}, 5000);
+			// create variable to index the slides - to track
+			var slideIndex = 0;
+			// call a function that does something with the slides
+			showSlides();
 
-			};
-			setInterval(function() {
-				nextSlideb()
-			}, 5100);
-
-			};
-			
-			window.onload = function() {
-			responsiveSlider();  
+			function showSlides() {
+				// a variable to be used with the for loop
+				var i;
+				// target the slides in the DOM as slides
+				var slides = document.getElementsByClassName("mySlides");
+				// loop through the slides showing them one at a time (display)
+				for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+				}
+				// increment the slides from 0 to the total number of slides (for loop)
+				slideIndex++;
+				// loop back to the beginning
+				if (slideIndex > slides.length) {slideIndex = 1}
+				slides[slideIndex-1].style.display = "block";
+				setTimeout(showSlides, 3000); // Change image every 2 seconds
+			}
+			function showSlidesb() {
+				// a variable to be used with the for loop
+				var i;
+				// target the slides in the DOM as slides
+				var slides = document.getElementsByClassName("mySlidesb");
+				// loop through the slides showing them one at a time (display)
+				for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+				}
+				// increment the slides from 0 to the total number of slides (for loop)
+				slideIndex++;
+				// loop back to the beginning
+				if (slideIndex > slides.length) {slideIndex = 1}
+				slides[slideIndex-1].style.display = "block";
+				setTimeout(showSlides, 3100); // Change image every 2 seconds
 			}
 		</script>
 	</body>
