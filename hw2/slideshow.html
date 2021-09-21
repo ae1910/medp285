@@ -47,59 +47,76 @@
 			margin: 4vw;
 			color: white;
 		}
+		/* Fading animation */
+		.fade {
+			animation-name: fade;
+			animation-duration: 1.5s;
+		}
+		@keyframes fade {
+			from {opacity: .4}
+			to {opacity: 1}
+		}
 	</style>
 	
 	<body>
 		<div class="container">
 			<div class="box">
-				<div class="mySlides w3-animate-top">
+				<div class="mySlides fade">
 					<img src= "img/plant1.jpg">
 				</div>
-				<div class="mySlides w3-animate-top">
+				<div class="mySlides fade">
 					<img src= "img/plant1cu.jpg">
 				</div>
-				<div class="mySlides w3-animate-top">
+				<div class="mySlides fade">
 					<img src= "img/plant2.jpg">
 				</div>
-				<div class="mySlides w3-animate-top">
+				<div class="mySlides fade">
 					<img src= "img/plant2cu.jpg">
 				</div>
-				<div class="mySlides w3-animate-top">
+				<div class="mySlides fade">
 					<img src= "img/plant3.jpg">
 				</div>
-				<div class="mySlides w3-animate-top">
+				<div class="mySlides fade">
 					<img src= "img/plant3cu.jpg">
 				</div>
-				<div class="mySlides w3-animate-top">
+				<div class="mySlides fade">
 					<img src= "img/plant4.jpg">
 				</div>
-				<div class="mySlides w3-animate-top">
+				<div class="mySlides fade">
 					<img src= "img/plant4cu.jpg">
 				</div>
-				<div class="mySlides w3-animate-top">
+				<div class="mySlides fade">
 					<img src= "img/plant5.jpg">
 				</div>
-				<div class="mySlides w3-animate-top">
+				<div class="mySlides fade">
 					<img src= "img/plant5cu.jpg">
 				</div>
 			</div>
 			<div class="logo">Plant Collection.</div>
 		</div>
 		<script>
-			var myIndex = 0;
-			carousel();
+			
+		// create variable to index the slides - to track
+		var slideIndex = 0;
+		// call a function that does something with the slides
+		showSlides();
 
-			function carousel() {
-			  var i;
-			  var x = document.getElementsByClassName("mySlides");
-			  for (i = 0; i < x.length; i++) {
-			    x[i].style.display = "none";  
-			  }
-			  myIndex++;
-			  if (myIndex > x.length) {myIndex = 1}    
-			  x[myIndex-1].style.display = "block";  
-			  setTimeout(carousel, 3000);    
-			}
+		function showSlides() {
+		    // a variable to be used with the for loop
+		    var i;
+		    // target the slides in the DOM as slides
+		    var slides = document.getElementsByClassName("mySlides");
+		    // loop through the slides showing them one at a time (display)
+		    for (i = 0; i < slides.length; i++) {
+		       slides[i].style.display = "none";
+		    }
+		    // increment the slides from 0 to the total number of slides (for loop)
+		    slideIndex++;
+		    // loop back to the beginning
+		    if (slideIndex > slides.length) {slideIndex = 1}
+		    slides[slideIndex-1].style.display = "block";
+		    setTimeout(showSlides, 3000); // Change image every 3 seconds
+		}
 		</script>
 	</body>
 </html>
