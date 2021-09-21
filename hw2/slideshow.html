@@ -17,7 +17,7 @@
 			width: 100vw;
 			height: 100vh;
 			position: relative;
-			overflow: hidden;
+			display: flex;
 		}
 		div.logo{
 			position: absolute;
@@ -34,6 +34,7 @@
 			height: 100vh;
 			top: 0;
 			left: 0;
+			overflow: hidden;
 		}
 		.container-right {
 			position: absolute;
@@ -41,6 +42,7 @@
 			height: 100%;
 			top:0;
 			left: 50%;
+			overflow: hidden;
 		}
 		/* Fading animation */
 		.fade {
@@ -55,7 +57,7 @@
 	
 	<body>
 		<div class="container">
-			<div class="container-left">
+			<div id="gallery1" class="container-left">
 				<div class="mySlides fade" style = "display:none">
 					<img src= "img/plant1.jpg" style="width:100%">
 				</div>
@@ -72,7 +74,7 @@
 					<img src= "img/plant5.jpg" style="width:100%">
 				</div>
 			</div>
-			<div class="container-right">
+			<div id="gallery2" class="container-right">
 				<div class="mySlidesb fade" style = "display:none">
 					<img src= "img/plant1cu.jpg" style="width:100%">
 				</div>
@@ -96,32 +98,26 @@
 			var slideIndex = 0;
 			// call a function that does something with the slides
 			showSlides();
-
-			function showSlides() {
-				// a variable to be used with the for loop
-				var i;
-				var j;
-				// target the slides in the DOM as slides
-				var slides = document.getElementsByClassName("mySlides");
-				var slides = document.getElementsByClassName("mySlidesb");
-				// loop through the slides showing them one at a time (display)
-				for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";
+			(function () {
+				function showSlides() {
+					// a variable to be used with the for loop
+					var i;
+					// target the slides in the DOM as slides
+					var slides = document.getElementsByClassName("mySlides");
+					// loop through the slides showing them one at a time (display)
+					for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+					}
+					// increment the slides from 0 to the total number of slides (for loop)
+					slideIndex++;
+					// loop back to the beginning
+					if (slideIndex > slides.length) {slideIndex = 1}
+					slides[slideIndex-1].style.display = "block";
+					setTimeout(showSlides, 3000); // Change image every 3 seconds
 				}
-				for (j = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";
-				}
-				// increment the slides from 0 to the total number of slides (for loop)
-				slideIndex++;
-				slidebIndex++;
-				// loop back to the beginning
-				if (slideIndex > slides.length) {slideIndex = 1}
-				slides[slideIndex-1].style.display = "block";
-				setTimeout(showSlides, 3000); // Change image every 3 seconds
-				if (slidebIndex > slides.length) {slidebIndex = 1}
-				slides[slidebIndex-1].style.display = "block";
-				setTimeout(showSlides, 3000); 
-			}
+				showSlides('gallery1');
+				showSlides('gallery2');
+			})();
 		</script>
 	</body>
 </html>
