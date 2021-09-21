@@ -71,19 +71,19 @@
 				</div>
 			</div>
 			<div id="gallery2" class="container-right">
-				<div class="mySlidesb w3-animate-top">
+				<div class="mySlides w3-animate-top">
 					<img src= "img/plant1cu.jpg" style="width:100%">
 				</div>
-				<div class="mySlidesb w3-animate-top">
+				<div class="mySlides w3-animate-top">
 					<img src= "img/plant2cu.jpg" style="width:100%">
 				</div>
-				<div class="mySlidesb w3-animate-top">
+				<div class="mySlides w3-animate-top">
 					<img src= "img/plant3cu.jpg;" style="width:100%">
 				</div>
-				<div class="mySlidesb w3-animate-top">
+				<div class="mySlides w3-animate-top">
 					<img src= "img/plant4cu.jpg" style="width:100%">
 				</div>
-				<div class="mySlidesb w3-animate-top">
+				<div class="mySlides w3-animate-top">
 					<img src= "img/plant5cu.jpg" style="width:100%">
 				</div>
 			</div>
@@ -92,18 +92,22 @@
 		<script>
 			var myIndex = 0;
 			carousel();
-
-			function carousel() {
-			var i;
-			var x = document.getElementsByClassName("mySlides");
-			for (i = 0; i < x.length; i++) {
-				x[i].style.display = "none";  
-			}
-			myIndex++;
-			if (myIndex > x.length) {myIndex = 1}   
-			x[myIndex-1].style.display = "block";  
-			setTimeout(carousel, 2500);    
-			}
+			(function () {
+				function carousel(container) {
+				var i;
+				var imgLen = document.getElementById(container)
+				var x = imgLen.getElementsByClassName("mySlides");
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";  
+				}
+				myIndex++;
+				if (myIndex > x.length) {myIndex = 1}   
+				x[myIndex-1].style.display = "block";  
+				setTimeout(carousel, 2500);    
+				}
+				carousel('gallery1')
+				carousel('gallery2')
+			}))();
 		</script>
 	</body>
 </html>
