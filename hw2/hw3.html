@@ -52,13 +52,16 @@
 			transform: translate(-40%, -50%);
 			width: 85%;
 		}
-		.row {
-			display: flex;
-		}
 		.column {
-			flex: 33.33%;
-			padding: 2.5px;
-		}
+			float: left;
+			width: 33.33%;
+			padding: 5px;
+  		}
+		.row::after {
+			content: "";
+			clear: both;
+			display: table;
+    		}
 		@media screen and (max-width: 500px) {
 			.column {
 				width: 100%;
