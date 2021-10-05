@@ -58,7 +58,7 @@ div svg {
 	font-family: ohno-blazeface,sans-serif;
 	font-weight: 900;
 	font-style: normal;
-	font-size: 18vw;
+	font-size: 14vw;
 	text-align: center;
 	vertical align: middle;
 }
@@ -100,4 +100,8 @@ div svg {
 	.column {
 		width: 100%;
 	}
+}
+audio {
+	horizontal-align: center;
+	vertical-align: middle;
 }
