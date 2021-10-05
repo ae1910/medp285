@@ -89,7 +89,7 @@ div svg {
 }
 .column {
 	float: left;
-	width: 33.33%;
+	width: 30%;
 	padding: 11px;
 }
 .row::after {
@@ -125,5 +125,4 @@ h2 {
 	font-weight: 500;
 	font-style: normal;
 	font-size: 2em;
-}
 }
