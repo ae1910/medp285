@@ -83,14 +83,14 @@ div svg {
 	font-size: 15vw;
 }
 .photos {
-	width: 75%;
+	width: 90%;
 	margin: 0 auto;
 	display: block;
 }
 .column {
 	float: left;
 	width: 33.33%;
-	padding: 15px;
+	padding: 11px;
 }
 .row::after {
 	content: "";
