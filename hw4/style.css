@@ -101,9 +101,12 @@ div svg {
 		width: 100%;
 	}
 }
-audio {
-	horizontal-align: center;
-	vertical-align: middle;
+.audio{
+	width:100%;
+}
+.audio audio{
+	margin: 0 auto;
+	display: table;
 }
 h1 {
 	font-family: ohno-blazeface,sans-serif;
