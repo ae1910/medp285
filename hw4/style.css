@@ -105,3 +105,18 @@ audio {
 	horizontal-align: center;
 	vertical-align: middle;
 }
+h1 {
+	font-family: ohno-blazeface,sans-serif;
+	font-weight: 900;
+	font-style: normal;
+	font-size: 8vw;
+	text-align: center;
+}
+h2 {
+	text-align: center;
+	font-family: degular-display,sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 2em;
+}
+}
