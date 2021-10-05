@@ -14,41 +14,9 @@
 		<link rel="shortcut icon" href="img/favicon-32x32.png">
 		<!--   https://www.w3schools.com/icons/-->
 		<link rel= "stylesheet" type="text/css" href= "style.css">
-		
-		<style type="text/css">
-			body{
-				background-color: #e2d8c5;
-			}
-			#about {
-				font-style: italic;
-			}
-		</style>
 	</head>
 
 	<body>
-		<main>
-			<img src="img/Beach-Banner.jpg" alt="Nature" class="responsive" width="100%" height="auto">
-			<!--     basic responsive image setting width: 100%-->
-		</main>
-
-		<!-- https://www.w3schools.com/tags/tag_nav.asp-->
-
-		<nav>
-		 <!-- navigation -->
-
-			<!-- https://www.w3schools.com/tags/tag_header.asp-->
-			<header>
-				<!--The most common way of adding navigation elements to websites are through using unordered lists (<ul></ul>).-->
-				<!-- https://www.w3schools.com/tags/tag_ul.asp -->      
-				<ul>
-					<li><a href="#home">Home</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#project">Projects</a></li>
-					<li><a href="#contact">Contact</a></li>
-					<li><a href="http://twitter.com" target="_blank"><img src="img/twitter.png" height="16"></a></li>
-				</ul>
-			</header>
-		</nav>
 		<!--     Inside ul tag we added li tag and inside each of li tags we added an anchor(a) tag.
 		the a tags are our links in our navigation menu. As you can see each one has a text inside for each of our sections and also they have a href attribute.
 
@@ -59,26 +27,35 @@
 		<!-- home -->
 		<!--     https://www.w3schools.com/tags/tag_section.asp-->    
 		<section id="home">
+			<nav>
+			 <!-- navigation -->
+
+				<!-- https://www.w3schools.com/tags/tag_header.asp-->
+				<header>
+					<!--The most common way of adding navigation elements to websites are through using unordered lists (<ul></ul>).-->
+					<!-- https://www.w3schools.com/tags/tag_ul.asp -->      
+					<ul class= "navibar">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#project">Projects</a></li>
+						<li><a href="#contact">Contact</a></li>
+						<li><a href="http://twitter.com" target="_blank"><img src="img/twitter.png" height="16"></a></li>
+					</ul>
+				</header>
+			</nav>
+			<div class= "open">
+				<p> Welcome </p>
+			</div>
+			<div class= "box">
+			</div>
+		</section>
+		<!-- About -->
+		<section id="about">
 			<!--  https://www.w3schools.com/tags/tag_video.asp-->  
 			<video width="320" height="240" controls>
 				<source src="video/totoro.mov">
 			</video>
 			<!-- https://www.w3schools.com/html/html_tables.asp--> 
-			<table border="1">
-				<tr>
-					<th>Title</th>
-					<th>Company</th>
-					<th>Year Released</th>
-				</tr>
-				<tr>
-					<td>My Neighbor Totoro</td>
-					<td>Studio Ghibli</td>
-					<td>1988</td>
-				</tr>
-			</table>
-		</section>
-		<!-- About -->
-		<section id="about">
 			<h1>Mark Ramos</h1>
 			<!--       https://www.w3schools.com/html/html_paragraphs.asp-->      
 			<p>Mark Ramos is a Brooklyn-based new media artist.  Mark is deeply committed to the ethos of open source: the free sharing of information and data + creative uses of technology.  His work is engaged with democratizing the worlds of art and technology through community and individual empowerment via the means of technological production.  Mark works with the mediums of physical computing (using computers to sense and react to the physical world), software programming and digital sculpture to create interactive, installation work that facilitate encounters with our own uncertain digital futures.  
