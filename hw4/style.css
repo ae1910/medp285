@@ -12,7 +12,7 @@ section {
 	margin: 0;
 	height: 100vh;
 }
-header{
+header {
 	font-family: degular-display,sans-serif;
 	font-weight: 500;
 	font-style: normal;
@@ -53,6 +53,12 @@ div {
 }
 div svg {
 	width: 100%;
+}
+.about {
+	font-family: ohno-blazeface,sans-serif;
+	font-weight: 900;
+	font-style: normal;
+	font-size: 18vw;
 }
 .open { 
 	height: 200px;
