@@ -82,12 +82,9 @@ div svg {
 	font-style: normal;
 	font-size: 15vw;
 }
-.boxes {
+.photos {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-45%, -50%);
-	width: 70%;
+	width: 85%;
 }
 .column {
 	float: left;
@@ -98,11 +95,6 @@ div svg {
 	content: "";
 	clear: both;
 	display: table;
-}
-@media screen and (max-width: 750px) {
-	.column {
-		width: 100%;
-	}
 }
 .video{
 	width:100%;
