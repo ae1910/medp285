@@ -1,1 +1,19 @@
-
+html, body {
+	margin: 0;
+	padding: 0;
+	background: #e2d8c5;
+	width: 100%;
+}
+section {
+	width: 100%;
+	display: table;
+	margin: 0;
+	height: 100vh;
+}
+article {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 2fr) 1fr;
+}
+article * {
+  grid-column: 2/3;
+}
