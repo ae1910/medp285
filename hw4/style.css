@@ -59,6 +59,8 @@ div svg {
 	font-weight: 900;
 	font-style: normal;
 	font-size: 18vw;
+	text-align: center;
+	vertical align: middle;
 }
 .open { 
 	height: 200px;
