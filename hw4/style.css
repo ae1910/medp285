@@ -64,7 +64,10 @@ div svg {
 }
 .open { 
 	height: 200px;
-	position: relative;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .open p {
@@ -100,6 +103,13 @@ div svg {
 	.column {
 		width: 100%;
 	}
+}
+.video{
+	width:100%;
+}
+.video video{
+	margin: 0 auto;
+	display: table;
 }
 .audio{
 	width:100%;
