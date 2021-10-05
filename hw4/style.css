@@ -61,3 +61,25 @@ div svg {
 	font-style: normal;
 	font-size: 15vw;
 }
+.boxes {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-45%, -50%);
+	width: 70%;
+}
+.column {
+	float: left;
+	width: 33.33%;
+	padding: 20px;
+}
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+@media screen and (max-width: 750px) {
+	.column {
+		width: 100%;
+	}
+}
