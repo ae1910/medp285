@@ -89,7 +89,7 @@ div svg {
 }
 .column {
 	float: left;
-	width: 30%;
+	width: 27%;
 	padding: 11px;
 }
 .row::after {
