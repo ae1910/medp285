@@ -25,14 +25,22 @@ header{
 	justify-content: space-between;
 	align-items: center;
 }
-header ul{
+header ul {
 	list-style: none;
 	display: flex;
 	margin-right: 50px;
-
 }
-header ul li{
+header ul li {
 	margin: 0 13px;
+	font-size: 1em;
+	text-decoration: none;
+}
+li:hover {
+	color:inherit;
+	font-style: italic;
+}
+li:visited {
+	color:inherit;
 }
 div {
 	position: absolute;
