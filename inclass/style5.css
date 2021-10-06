@@ -25,6 +25,7 @@ article * {
 }
 .publish-time {
 	text-color: gray;
+	font-size: 1em;
 }
 .inphoto {
 	grid-column: 2/7;
@@ -32,4 +33,22 @@ article * {
 }
 div, ul.last {
 	margin-bottom: 2.4rem;
+}
+h2 {
+	font-size: 1em;
+}
+h3 {
+	font-size: 1em;
+}
+div {
+	font-size: 1em;
+}
+h4 {
+	font-size: 1em;
+}
+h5 {
+	font-size: 1em;
+}
+p {
+	font-size: 1em;
 }
