@@ -23,7 +23,7 @@ article * {
 		grid-template-columns: 1fr 5% [start] 15% 60% 15% [end] 5% 1fr;
 	}
 }
-
-img {
+.inphoto {
+	grid-column: 2/7;
 	width: 100%;
 }
