@@ -4,15 +4,14 @@ html, body {
 	background: white;
 	width: 100%;
 }
-section {
+.intro {
 	position: absolute;
-	top: 0;
-	left: 0;
+	margin: auto;
 	width: 100%;
-	display: table;
 	height: 100vh;
-	object-fit: cover;
-	object-fit: 83%;
+	backgroumd-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-2/explorer.jpeg") no-repeat 50% 50%;
+	display: table;
+	background-size: cover;
 }
 .container {
 	position: relative;
