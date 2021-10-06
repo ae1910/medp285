@@ -23,7 +23,13 @@ article * {
 		grid-template-columns: 1fr 5% [start] 15% 60% 15% [end] 5% 1fr;
 	}
 }
+.publish-time {
+	text-color: gray;
+}
 .inphoto {
 	grid-column: 3/6;
 	width: 100%;
+}
+div, ul.last {
+	margin-bottom: 2.4rem;
 }
