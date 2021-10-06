@@ -33,16 +33,24 @@ article * {
 	text-color: gray;
 	font-size: 1em;
 }
-.inphoto {
+.inphoto, .inphoto2 {
 	grid-column: 2/7;
 	width: 100%;
 	margin-bottom: 0.5rem;
 }
+.inphoto2 {
+	border-radius: 4px;
+}
 div, ul.last {
 	margin-bottom: 2.4rem;
 }
-h2.destination {
+.destination {
 	font-size: 2em;
+	text-color: orange;
+	font-style: cursive;
+}
+.descrpition {
+	font-style: bold;
 }
 div {
 	font-size: 1em;
