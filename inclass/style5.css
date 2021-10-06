@@ -3,11 +3,10 @@ html, body {
 	padding: 0;
 	background: white;
 	width: 100%;
-	height: 100%;
 }
 section {
 	background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-2/explorer.jpeg");
-	height: 100%;
+	height: 100vh;
 	background-size: cover;
 }
 main {
