@@ -32,7 +32,7 @@ article * {
 	}
 }
 .publish-time {
-	color: gray;
+	color: grey;
 	font-size: 1em;
 }
 .inphoto, .inphoto2 {
@@ -53,6 +53,9 @@ div, ul.last {
 }
 .descrpition {
 	font-style: bold;
+}
+.more {
+	color: grey;
 }
 div {
 	font-size: 1em;
