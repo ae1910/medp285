@@ -5,7 +5,8 @@ html, body {
 	width: 100%;
 }
 section {
-	margin: 0;
+	top: 0;
+	left: 0;
 	background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-2/explorer.jpeg");
 	height: 100vh;
 	background-size: cover;
