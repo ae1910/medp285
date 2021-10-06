@@ -5,10 +5,31 @@ html, body {
 	width: 100%;
 }
 section {
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
 	display: table;
-	margin: 0;
 	height: 100vh;
+	object-fit: cover;
+	object-fit: 83%;
+}
+.container {
+	position: relative;
+	align-contentL: center;
+}
+.titled {
+	position: absolute;
+	background-color: white;
+	display: flex;
+	padding: 1.5rem 1rem;
+	align-items: center;
+	left: 1.5rem;
+	bottom: 0;
+	width: 300px
+}
+.title {
+	font-size: 3em;
 }
 article {
   display: grid;
@@ -34,11 +55,8 @@ article * {
 div, ul.last {
 	margin-bottom: 2.4rem;
 }
-h2 {
-	font-size: 1em;
-}
-h3 {
-	font-size: 1em;
+.destination {
+	font-size: 2em;
 }
 div {
 	font-size: 1em;
@@ -48,7 +66,7 @@ h4 {
 	font-size: 1em;
 }
 h5 {
-	font-size: 1em;
+	font-size: 1.5em;
 }
 p {
 	font-size: 1em;
