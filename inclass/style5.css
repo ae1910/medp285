@@ -30,7 +30,7 @@ article * {
 	}
 }
 .publish-time {
-	text-color: gray;
+	color: gray;
 	font-size: 1em;
 }
 .inphoto, .inphoto2 {
@@ -46,7 +46,7 @@ div, ul.last {
 }
 .destination {
 	font-size: 2em;
-	text-color: orange;
+	color: orange;
 	font-style: cursive;
 }
 .descrpition {
