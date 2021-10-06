@@ -24,6 +24,6 @@ article * {
 	}
 }
 .inphoto {
-	grid-column: 2/7;
+	grid-column: 3/6;
 	width: 100%;
 }
