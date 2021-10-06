@@ -47,7 +47,7 @@ div, ul.last {
 .destination {
 	font-size: 2em;
 	color: orange;
-	font-style: cursive;
+	font-family: cursive;
 }
 .descrpition {
 	font-style: bold;
