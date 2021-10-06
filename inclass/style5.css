@@ -11,6 +11,9 @@ html, body {
 	height: 100vh;
 	background-size: cover;
 }
+.intro img{
+	width: 100%;
+}
 main {
 	background-color: white;
 	margin: 75vh 3em 0 3em;
