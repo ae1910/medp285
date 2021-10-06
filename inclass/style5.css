@@ -11,11 +11,6 @@ section {
 	justify-content: center;
 	align-items: bottom;
 }
-.title {
-	color: transparent;
-	padding 15px;
-	width: 7.5in;
-}
 main {
 	background-color: white;
 }
