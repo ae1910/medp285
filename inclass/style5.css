@@ -27,7 +27,7 @@ article * {
 	text-color: gray;
 }
 .inphoto {
-	grid-column: 3/6;
+	grid-column: 2/7;
 	width: 100%;
 }
 div, ul.last {
