@@ -4,15 +4,15 @@ body {
 p {
   color: #FFFFFF;
   font-family: Georgia;
-  font-size: 0.75em;
+  font-size: 1em;
   font-weight: 100;
   font-style: normal;
   font-variant: normal;
   font-variant-ligatures: no-common-ligatures;
-  line-height: 1em;
+  line-height: 1.2em;
 }
 .title {
-  font-varient-caps: all-small-caps;
+  font-varient-caps: small-caps;
   font-kerning: none;
 }
 .thinkiing {
@@ -21,3 +21,4 @@ p {
 .nums {
   font-variant-numeric: oldstyle-nums;
 }
+.
