@@ -37,11 +37,13 @@ p {
   width: 25%;
   float: left;
   z-index: 100;
+  margin: 0 4px 80px 0;
 }
 .third {
   width: 25%;
   float: right;
   z-index: 50;
+  margin: 0 0 80px 0;
 }
 .second {
   width: 75%;
