@@ -21,6 +21,7 @@ p {
   background-size:contain;
   height:200px;
   width:100%;
+  align: center;
 }
 .title {
   font-varient-caps: small-caps;
@@ -37,12 +38,12 @@ p {
   float: left;
   z-index: 100;
 }
-.second {
+.third {
   width: 25%;
   float: right;
   z-index: 50;
 }
-.third {
+.second {
   width: 75%;
   position: fixed;
 }
