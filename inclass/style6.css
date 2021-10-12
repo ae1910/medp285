@@ -10,8 +10,8 @@ body {
     text-align: center;
 }
 div img {
-	height: 100%;
-	width: auto;
+	width: 100%;
+	display: block;
 }
 #item1 {
 	background-color: #B2D6FF;
