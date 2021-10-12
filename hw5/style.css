@@ -26,10 +26,22 @@ p {
   font-varient-caps: small-caps;
   font-kerning: none;
 }
-.thinkiing {
-  font-style: oblique;
-}
 .nums {
   font-variant-numeric: oldstyle-nums;
+}
+.thinkiing {
+  font-style: italic;
+}
+.first {
+  width: 25%;
+  float: left;
+}
+.second {
+  width: 25%;
+  float: right;
+}
+.third {
+  width: 75%;
+  position: fixed;
 }
 
