@@ -5,6 +5,8 @@ p {
   text-color: white;
   font-family: Georgia;
   font-size: 1em;
+  font-weight: 300;
+  font-style: normal;
   font-variant: normal;
   font-variant-ligatures: no-common-ligatures;
 }
@@ -12,3 +14,5 @@ p {
   font-varient-caps: all-small-caps;
   font-kerning: none;
 }
+.thinkiing {
+  font-style: oblique;
