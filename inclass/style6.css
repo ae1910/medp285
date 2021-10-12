@@ -12,7 +12,8 @@ body {
 }
 div img {
 	width: 100%;
-	display: block;
+	height: 33vh;
+	object-fit: cover;
 }
 #item1 {
 	background-color: #B2D6FF;
