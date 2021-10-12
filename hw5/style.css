@@ -44,10 +44,11 @@ p {
   width: 25%;
   float: right;
   z-index: 50;
-  margin: 0 0 80px 0;
+  margin-bottom: 80px;
 }
 .second {
   width: 75%;
   position: fixed;
+  margin-right: 4px
 }
 
