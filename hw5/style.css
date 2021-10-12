@@ -2,7 +2,7 @@ body {
   background-color: black;
 }
 .container {
-  align: center middle;
+  margin: 50px 75px;
 }
 p {
   color: #FFFFFF;
@@ -13,6 +13,7 @@ p {
   font-variant: normal;
   font-variant-ligatures: no-common-ligatures;
   line-height: 1.2em;
+  padding: 5px;
 }
 .back {
   background-image: url("rushdie.gif");
