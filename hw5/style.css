@@ -2,7 +2,7 @@ body {
   background-color: black;
 }
 p {
-  text-color: white;
+  text-color: #FFFFFF;
   font-family: Georgia;
   font-size: 1em;
   font-weight: 300;
@@ -16,3 +16,7 @@ p {
 }
 .thinkiing {
   font-style: oblique;
+}
+.nums {
+  font-variant-numeric: oldstyle-nums;
+}
