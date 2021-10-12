@@ -35,10 +35,12 @@ p {
 .first {
   width: 25%;
   float: left;
+  z-index: 100;
 }
 .second {
   width: 25%;
   float: right;
+  z-index: 50;
 }
 .third {
   width: 75%;
