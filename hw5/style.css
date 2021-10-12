@@ -17,6 +17,10 @@ p {
 }
 .back {
   background-image: url("rushdie.gif");
+  background-repeat:no-repeat;
+  background-size:contain;
+  height:200px;
+  width:100%;
 }
 .title {
   font-varient-caps: small-caps;
