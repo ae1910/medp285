@@ -1,0 +1,12 @@
+body {
+  background-color: black;
+}
+p {
+  text-color: white;
+  font-size: 1em;
+  font-variant: normal;
+  
+}
+.title {
+  font-varient-caps: all-small-caps;
+}
