@@ -1,6 +1,9 @@
 body {
   background-color: black;
 }
+.container {
+  align: center middle;
+}
 p {
   color: #FFFFFF;
   font-family: Georgia;
@@ -10,6 +13,9 @@ p {
   font-variant: normal;
   font-variant-ligatures: no-common-ligatures;
   line-height: 1.2em;
+}
+.back {
+  background-image: url("rushdie.gif");
 }
 .title {
   font-varient-caps: small-caps;
@@ -21,4 +27,4 @@ p {
 .nums {
   font-variant-numeric: oldstyle-nums;
 }
-.
+
