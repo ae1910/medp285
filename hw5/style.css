@@ -49,6 +49,6 @@ p {
 .second {
   width: 75%;
   position: fixed;
-  padding-right: 4px
+  clear: both;
 }
 
