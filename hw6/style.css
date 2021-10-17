@@ -3,7 +3,7 @@ html, body {
 	padding: 0;
 	width: 100%;
 }
-.giphy-embed {
+img {
  	width: 100%;
 	cursor: default;
 }
