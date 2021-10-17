@@ -7,15 +7,14 @@ html, body {
 .gifs {
  	width: 100%;
 	cursor: default;
-	padding: 0;
 }
 .wrapper4c {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	padding: 0;
+	grid-gap: 0;
 }
 .wrapper6c {
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
-	padding: 0;
+	grid-gap: 0;
 }
