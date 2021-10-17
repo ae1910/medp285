@@ -3,7 +3,7 @@ html, body {
 	padding: 0;
 	width: 100%;
 }
-iframe {
+.giphy-embed {
  	width: 100%;
 	cursor: default;
 }
