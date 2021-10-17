@@ -8,10 +8,6 @@ html, body {
 	cursor: default;
 	padding: 0;
 }
-.wrapper3c {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	}
 .wrapper4c {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
