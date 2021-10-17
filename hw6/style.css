@@ -1,6 +1,7 @@
 html, body {
 	margin: 0;
 	padding: 0;
+	background: black;
 	width: 100%;
 }
 .gifs {
@@ -15,7 +16,4 @@ html, body {
 .wrapper6c {
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
-}
-.nested {
-	display: contents;
 }
