@@ -6,7 +6,7 @@ html, body {
 }
 .gifs {
  	width: 100%;
-	cursor: default;
+	height:auto;
 }
 .wrapper4c {
 	display: grid;
