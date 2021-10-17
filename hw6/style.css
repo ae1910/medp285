@@ -6,6 +6,7 @@ html, body {
 .gifs {
  	width: 100%;
 	cursor: default;
+	padding: 0;
 }
 .wrapper3c {
 	display: grid;
