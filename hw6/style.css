@@ -6,6 +6,7 @@ html, body {
 }
 .gifs {
  	width: 100%;
+	height: auto;
 	object-fit: cover;
 }
 .wrapper4c {
