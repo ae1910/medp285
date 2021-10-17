@@ -1,15 +1,21 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
 iframe {
-  width: 100%;
+ 	width: 100%;
+	cursor: default;
 }
 .wrapper3c {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	}
 .wrapper4c {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 }
 .wrapper6c {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
 }
