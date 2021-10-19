@@ -10,7 +10,9 @@ body {
 		* needs to be taller than your tallest column. */
 background-color: #f7f7f7
 }
-
+div {
+	width: 100%
+}
 .item {
   width: 32%;
   margin-bottom: 2%; /* (100-32*3)/2 */
