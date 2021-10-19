@@ -2,20 +2,21 @@ body {
 	width: 100%;
 }
 .container {
-  display: flex;
-  flex-flow: column wrap;
-  align-content: space-between;
-  height: 580px;
+	padding: 0 1em
+	display: flex;
+	flex-flow: column wrap;
+	align-content: space-between;
+	height: 580px;
 	/* Your container needs a fixed height, and it 
 		* needs to be taller than your tallest column. */
-background-color: #f7f7f7
+	background-color: #f7f7f7
 }
-div {
+img {
 	width: 100%
 }
 .item {
-  width: 32%;
-  margin-bottom: 2%; /* (100-32*3)/2 */
+	width: 32%;
+	margin-bottom: 2%; /* (100-32*3)/2 */
 }
 /* Re-order items into rows */
 .item:nth-child(3n+1) { order: 1; }
