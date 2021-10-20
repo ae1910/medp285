@@ -1,4 +1,4 @@
-body {
+html, body {
 	width: 100%;
 }
 .container {
@@ -6,7 +6,7 @@ body {
 	display: flex;
 	flex-flow: column wrap;
 	align-content: space-between;
-	height: 2000px;
+	max-height: 1000px;
 	/* Your container needs a fixed height, and it 
 		* needs to be taller than your tallest column. */
 	background-color: #f7f7f7;
@@ -27,7 +27,7 @@ img {
 .container::before,
 .container::after {
 	content: "";
-	flex-basis: 100%;
+	flex-basis: 75%;
 	width: 0;
 	order: 2;
 }
