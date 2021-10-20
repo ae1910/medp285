@@ -6,10 +6,10 @@ body {
 	display: flex;
 	flex-flow: column wrap;
 	align-content: space-between;
-	height: 780px;
+	height: 580px;
 	/* Your container needs a fixed height, and it 
 		* needs to be taller than your tallest column. */
-	background-color: #f7f7f7
+	background-color: #f7f7f7;
 }
 img {
 	width: 100%
