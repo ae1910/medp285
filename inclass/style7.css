@@ -2,32 +2,15 @@ html, body {
 	width: 100%;
 }
 .container {
-	padding: 0 1em
-	display: flex;
-	flex-flow: column wrap;
-	align-content: space-between;
-	max-height: 1000px;
-	/* Your container needs a fixed height, and it 
-		* needs to be taller than your tallest column. */
-	background-color: #f7f7f7;
-	width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item {
+  height: auto;
+  margin-bottom: 10px;
 }
 img {
 	width: 100%
-}
-.item {
-	width: 32%;
-	margin-bottom: 2%; /* (100-32*3)/2 */
-}
-/* Re-order items into rows */
-.item:nth-child(3n+1) { order: 1; }
-.item:nth-child(3n+2) { order: 2; }
-.item:nth-child(3n)   { order: 3; }
-/* Force new columns */
-.container::before,
-.container::after {
-	content: "";
-	flex-basis: 75%;
-	width: 0;
-	order: 2;
 }
