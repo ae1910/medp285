@@ -10,6 +10,7 @@ body {
 	/* Your container needs a fixed height, and it 
 		* needs to be taller than your tallest column. */
 	background-color: #f7f7f7;
+	width: 100%;
 }
 img {
 	width: 100%
