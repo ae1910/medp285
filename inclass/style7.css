@@ -6,7 +6,7 @@ body {
 	display: flex;
 	flex-flow: column wrap;
 	align-content: space-between;
-	height: 580px;
+	height: 780px;
 	/* Your container needs a fixed height, and it 
 		* needs to be taller than your tallest column. */
 	background-color: #f7f7f7
