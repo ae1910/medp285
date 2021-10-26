@@ -1,0 +1,137 @@
+.start {
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: white;
+}
+.wrapper {
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+.left, .right {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+a, a:hover, a:visited {
+	 text-decoration: none;
+	 color: inherit;
+}
+
+@media (max-width: 900px) {
+	.wrapper{
+		grid-template-rows: 50% 50%;
+	}
+	.left, .right {
+		height: 50vh;
+		grid-column: 1/3;
+	}
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap'); */
+.photos {
+	margin: 0;
+	width: 100%;
+	background-color: #FEF9ED;
+	color: #FEF9ED;
+}
+.containerr {
+	width: 100%;
+}
+p {
+	float: left;
+	padding: 2vh 0 0 4vw;
+	font-family: 'Cabin', sans-serif;
+}
+.intro {
+	width: 100%;
+	display: table;
+	margin: 0;
+	height: 100vh;
+	background-color: #5F7C7C;
+}
+h1 { 
+	font-family: "Playfair Display";
+	font-size: 8vw;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 23px;
+	position: absolute;
+	top: 42%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.middle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 45%;
+}
+.main {
+	width: 100%;
+}
+
+@media (max-width: 700px) {
+	.middle {
+		width: 100%;
+	}
+	h1 {
+		font-size: 12vw;
+	}
+}
+
+.images {
+	max-width: 100%;
+	padding: 15vh 3vw;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.images div {
+	flex: 0 0 48%;
+}
+.images img {
+	max-width: 100%;
+	padding-bottom: 8vh;
+}
+
+@media (max-width: 900px) {
+	.images {
+		flex-direction: column;
+	}
+	.images img {
+	width: 100%;
+	}
+	.flex-eight img {
+	width: 125%;
+	}
+}
+
+.work{
+	margin: 0;
+	width: 100%;
+	background-color: #FEF9ED;
+}
+.container {
+	margin-top: 4vh;
+}
+.navbar-brand{
+	font-family: "Playfair Display";
+	font-size: 30px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 600;
+	line-height: 23px;
+}
+.nav-link {
+	font-family: 'Cabin', sans-serif;
+}
+.nav-link:hover {
+	color: inherit;
+	font-style: italic;
+}
