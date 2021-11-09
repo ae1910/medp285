@@ -20,6 +20,32 @@ a, a:hover, a:visited {
 	 text-decoration: none;
 	 color: inherit;
 }
+a.link:hover {
+	font-family: "Playfair Display";
+	font-size: 4vw;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 23px;
+	
+	.left {
+		background-color: #FEF9ED;
+		color: black;
+	}
+}
+a.link2:hover {
+	font-family: "Playfair Display";
+	font-size: 4vw;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 23px;
+	
+	.right {
+		background-color: #FEF9ED;
+		color: #FEF9ED;
+	}
+}
 
 @media (max-width: 900px) {
 	.wrapper{
@@ -110,6 +136,7 @@ h1 {
 	width: 125%;
 	}
 }
+
 
 .work{
 	margin: 0;
