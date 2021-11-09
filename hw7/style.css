@@ -183,5 +183,5 @@ h1 {
 }
 .thumb img:hover {
 	box-shadow: 0 0 11px rgba(33,33,33,.2);
-	transform: scale(1.1);
+	transform: scale(1.05);
 }
