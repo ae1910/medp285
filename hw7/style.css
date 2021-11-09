@@ -29,12 +29,6 @@ a.link:hover::before {
 	background-color: #FEF9ED;
 }
 a.link:hover {
-	font-family: 'Playfair Display';
-	font-size: 3.5vw;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 400;
-	line-height: 23px;
 	text-transform: capitalize;
 }
 a.link2:hover:before {
@@ -47,12 +41,6 @@ a.link2:hover:before {
 }
 
 a.link2:hover {
-	font-family: 'Playfair Display';
-	font-size: 3.5vw;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 400;
-	line-height: 23px;
 	text-transform: uppercase;
 	color: #FEF9ED;
 }
