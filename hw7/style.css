@@ -31,10 +31,7 @@ a.link:hover:before {
 	position: fixed;
 	z-index: -1;
 	text-transform: capitalize;
-	
-	.left {
-		background-color: #FEF9ED;
-	}
+	background-color: #FEF9ED;
 }
 a.link2:hover:before {
 	font-family: "Playfair Display";
@@ -48,10 +45,7 @@ a.link2:hover:before {
 	position: fixed;
 	z-index: -1;
 	color: #FEF9ED;
-	
-	.right {
-		background-color: #FEF9ED;
-	}
+	background-color: #FEF9ED;
 }
 
 @media (max-width: 900px) {
@@ -63,6 +57,7 @@ a.link2:hover:before {
 		grid-column: 1/3;
 	}
 }
+
 
 .photos {
 	margin: 0;
