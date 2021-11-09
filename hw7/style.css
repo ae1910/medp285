@@ -20,7 +20,7 @@ a, a:hover, a:visited {
 	 text-decoration: none;
 	 color: inherit;
 }
-a.link:hover:before {
+a.link:hover::before {
 	font-family: "Playfair Display";
 	font-size: 3.5vw;
 	font-style: normal;
@@ -33,7 +33,7 @@ a.link:hover:before {
 	text-transform: capitalize;
 	background-color: #FEF9ED;
 }
-a.link2:hover:before {
+a.link2:hover {
 	font-family: "Playfair Display";
 	font-size: 3.5vw;
 	font-style: normal;
