@@ -29,7 +29,7 @@ a.link:hover::before {
 	background-color: #FEF9ED;
 }
 a.link:hover {
-	font-family: "Playfair Display" !important;
+	font-family: 'Playfair Display', serif !important;
 	font-size: 3.5vw;
 	font-style: normal;
 	font-variant: normal;
@@ -47,7 +47,7 @@ a.link2:hover:before {
 }
 
 a.link2:hover {
-	font-family: "Playfair Display" !important;
+	font-family: 'Playfair Display', serif !important;
 	font-size: 3.5vw;
 	font-style: normal;
 	font-variant: normal;
