@@ -33,7 +33,7 @@ a.link:hover > p {
 	font-size: 3.5vw;
 	font-style: normal;
 	font-variant: normal;
-	font-weight: 400;
+	font-weight: 600;
 	line-height: 23px;
 	text-transform: capitalize;
 }
@@ -51,7 +51,7 @@ a.link2:hover > p {
 	font-size: 3.5vw;
 	font-style: normal;
 	font-variant: normal;
-	font-weight: 600;
+	font-weight: 400;
 	line-height: 23px;
 	text-transform: uppercase;
 	color: #FEF9ED;
