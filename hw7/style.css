@@ -16,7 +16,7 @@
 	align-items: center;
 	height: 100vh;
 }
-a, a:visited {
+a, a:hover, a:visited {
 	 text-decoration: none;
 	 color: inherit;
 }
