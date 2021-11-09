@@ -20,27 +20,33 @@ a, a:hover, a:visited {
 	 text-decoration: none;
 	 color: inherit;
 }
-a.link:hover {
+a.link:hover:before {
 	font-family: "Playfair Display";
-	font-size: 3vw;
+	font-size: 3.5vw;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 400;
 	line-height: 23px;
+	content: '';
+	position: fixed;
+	z-index: -1;
 	text-transform: capitalize;
 	
 	.left {
 		background-color: #FEF9ED;
 	}
 }
-a.link2:hover {
+a.link2:hover:before {
 	font-family: "Playfair Display";
-	font-size: 3vw;
+	font-size: 3.5vw;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 400;
 	line-height: 23px;
 	text-transform: uppercase;
+	content: '';
+	position: fixed;
+	z-index: -1;
 	color: #FEF9ED;
 	
 	.right {
