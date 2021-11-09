@@ -28,7 +28,13 @@ a.link:hover::before {
 	z-index: -1;
 	background-color: #FEF9ED;
 }
-a.link:hover {
+a.link:hover > p {
+	font-family: 'Playfair Display' !important;
+	font-size: 3.5vw;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 23px;
 	text-transform: capitalize;
 }
 a.link2:hover:before {
@@ -40,7 +46,13 @@ a.link2:hover:before {
 	background-color: #5F7C7C;
 }
 
-a.link2:hover {
+a.link2:hover > p {
+	font-family: 'Playfair Display' !important;
+	font-size: 3.5vw;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 600;
+	line-height: 23px;
 	text-transform: uppercase;
 	color: #FEF9ED;
 }
