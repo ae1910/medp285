@@ -167,10 +167,10 @@ h1 {
 }
 .nav-link {
 	font-family: 'Cabin', sans-serif;
+	animation: ital 3s infinite;
 }
 .nav-link:hover {
 	color: inherit;
-	animation: ital 3s infinite;
 }
 @keyframes ital {
 	from {font-styleL: normal;}
