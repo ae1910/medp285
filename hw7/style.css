@@ -176,3 +176,12 @@ h1 {
 	from {font-styleL: normal;}
 	to {font-style: italic;}
 }
+
+.thumb {
+	transition: all .2s ease-in-out;
+	transition: box-shadow .3s;
+}
+.thumb:hover {
+	box-shadow: 0 0 11px rgba(33,33,33,.2);
+	transform: scale(1.1);
+}
