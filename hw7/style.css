@@ -22,28 +22,29 @@ a, a:hover, a:visited {
 }
 a.link:hover {
 	font-family: "Playfair Display";
-	font-size: 4vw;
+	font-size: 3vw;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 400;
 	line-height: 23px;
+	text-transform: capitalize;
 	
 	.left {
 		background-color: #FEF9ED;
-		color: black;
 	}
 }
 a.link2:hover {
 	font-family: "Playfair Display";
-	font-size: 4vw;
+	font-size: 3vw;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 400;
 	line-height: 23px;
+	text-transform: uppercase;
+	color: #FEF9ED;
 	
 	.right {
 		background-color: #FEF9ED;
-		color: #FEF9ED;
 	}
 }
 
