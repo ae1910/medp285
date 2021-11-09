@@ -21,18 +21,24 @@ a, a:hover, a:visited {
 	 color: inherit;
 }
 a.link:hover::before {
-	font-family: "Playfair Display";
-	font-size: 3.5vw;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 400;
-	line-height: 23px;
+	content: '';
+	position: absolute;
+	z-index: -1;
+	background-color: #FEF9ED;
+}
+a.link:hover {
 	content: '';
 	position: fixed;
 	z-index: -1;
 	text-transform: capitalize;
-	background-color: #FEF9ED;
 }
+a.link2:hover:before {
+	content: '';
+	position: fixed;
+	z-index: -1;
+	background-color: #5F7C7C;
+}
+
 a.link2:hover {
 	font-family: "Playfair Display";
 	font-size: 3.5vw;
@@ -41,11 +47,7 @@ a.link2:hover {
 	font-weight: 400;
 	line-height: 23px;
 	text-transform: uppercase;
-	content: '';
-	position: fixed;
-	z-index: -1;
 	color: #FEF9ED;
-	background-color: #FEF9ED;
 }
 
 @media (max-width: 900px) {
