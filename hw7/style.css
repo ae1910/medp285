@@ -170,5 +170,9 @@ h1 {
 }
 .nav-link:hover {
 	color: inherit;
-	font-style: italic;
+	animation: ital 3s infinite;
+}
+@keyframes ital {
+	from {font-styleL: normal;}
+	to {font-style: italic;}
 }
