@@ -23,6 +23,8 @@ a, a:hover, a:visited {
 a.link:hover::before {
 	content: '';
 	position: absolute;
+	display: block;
+        top: 0; bottom: 0; left: 0; right: 0;
 	z-index: -1;
 	background-color: #FEF9ED;
 }
@@ -38,6 +40,8 @@ a.link:hover {
 a.link2:hover:before {
 	content: '';
 	position: absolute;
+	display: block;
+        top: 0; bottom: 0; left: 0; right: 0;
 	z-index: -1;
 	background-color: #5F7C7C;
 }
