@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Homework 6</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel= "stylesheet" type="text/css" href= "style.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
+	</head>
+	
+	<body>
+		<div class="contain">
+			<div class="cursor"></div>
+			<p> <span class="compare">Don't compare</span> your <span>life</span> to others. There's no comparison between</p><div class="project-list"><div class="project p-1"><p><span>the sun</span></p><div class="project-overlay"></div></div></div><p>and</p><div class="project-list"><div class="project p-2"><p><span>the moon</span></p><div class="project-overlay"></div></div></div><p>, they <span class="shine">shine</span> when it's <span>their time</span>. </p>
+		</div>
+	</body>
+
+	<script>
+      var $cursor = $(".cursor"),
+        $overlay = $(".project-overlay");
+
+      function moveCircle(e) {
+        TweenLite.to($cursor, 0.5, {
+          css: {
+            left: e.pageX,
+            top: e.pageY
+          },
+          delay: 0.03
+        });
+      }
+
+      $(".p-1").hover(function() {
+        $(".cursor").css({ "background-image": "url(img/sun.jpg)" });
+      });
+      $(".p-2").hover(function() {
+        $(".cursor").css({ "background-image": "url(img/moon.jpg)" });
+      });
+
+      var flag = false;
+      $($overlay).mousemove(function() {
+        flag = true;
+        TweenLite.to($cursor, 0.3, { scale: 1, autoAlpha: 1 });
+        $($overlay).on("mousemove", moveCircle);
+      });
+
+      $($overlay).mouseout(function() {
+        flag = false;
+        TweenLite.to($cursor, 0.3, { scale: 0.1, autoAlpha: 0 });
+      });
+    </script>
+</html>

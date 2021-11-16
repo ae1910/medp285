@@ -1,0 +1,73 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: #EDDFD9;
+}
+p {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	font-family: 'Playfair Display' !important;
+	font-size: 9.8vw;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 9.8vw;
+	color: #181F1F;
+}
+.contain {
+	margin: 3%;
+	padding: 5%;
+}
+.cursor {
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: scale(0.1);
+  opacity: 0;
+  margin: -100px 0 0 -100px;
+  background: url(img/sun.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  z-index: 1;
+}
+.project {
+  display: flex;
+  flex-basis: 1;
+  position: relative;
+  z-index: 2;
+}
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  text-align: center;
+}
+span {
+	font-weight: 600;
+	margin: 0;
+	padding: 0;
+}
+.compare:hover {
+	text-transform: uppercase;
+	font-style: normal;
+	color: #C54126;
+	font-size: 9.5vw;
+	text-decoration: underline;
+}
+.shine:hover {
+	width: 550px;
+	color: #F4BF3C;
+    border-radius: 60%;
+    text-align: center;
+    border: 1px solid #F4BF3C;
+}
+span:hover {
+	font-style: italic;
+}
