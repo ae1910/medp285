@@ -4,11 +4,19 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>In Class Assignment 12</title>
+		
+		<style>
+			section {
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		</style>
 	</head>
 	
 	<body>
 		<section>
-			<img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+			<img src="img/dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
 			<p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
 		</section>
 		
@@ -27,7 +35,17 @@
 			p.padding = '10px';
 			p.width = '250px';
 			p.textAlign = 'center';
-
+			
+			var newpara = document.createElement('p');
+			newpara.textContent = 'Please come again.';
+			sect.appendChild(newpara);
+			var newp = newpara.style;
+			newp.color = 'white';
+			newp.backgroundColor = 'black';
+			newp.padding = '25px';
+			newp.fontFamily = "Courier New,sans-serif"
+			newp.width = '100%';
+			newp.textAlign = 'center';
 		</script>
 	</body>
 </html>
