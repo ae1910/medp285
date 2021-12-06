@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mad Libs!</title>
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon_madlibs.png">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width-device-width, initial-scale=1">
+
+		<style type="text/css">
+			body {
+				width: 90%;
+				font-family: georgia, sans serif;
+				font-size: 1.5em;
+				margin: 2% auto;
+			}
+			img {
+				width: 100%;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="logo"> <img src="img/Yhujik.png"> </div>
+		<div>
+			<script type="text/javascript">
+				var questions = 18;
+				var questionsLeft = ' [' + questions + ' questions left]';
+				var name = prompt('Please type a name:' + questionsLeft);
+				questions -= 1;
+				var questionsLeft = ' [' + questions + ' questions left]';
+				var exclamation = prompt('Please type an exclamation:' + questionsLeft);
+				questions -= 1;
+				var questionsLeft = ' [' + questions + ' questions left]';
+				var word = prompt('Please type a silly word:' + questionsLeft);
+				questions -= 1;
+				var questionsLeft = ' [' + questions + ' questions left]';
+				var number = prompt('Please type a number:' + questionsLeft);
+				questions -= 1
+				var questionsLeft = ' [' + questions + ' questions left]';
+				var object = prompt('Please type a plural object:' + questionsLeft);
+				questions -= 1;
+				var questionsLeft = ' [' + questions + ' questions left]';
+				var name2 = prompt('Please type a store name:' + questionsLeft);
+				questions -= 1;
+				var questionsLeft = ' [' + questions + ' questions left]';
+				var bodypart = prompt('Please type a body part:' + questionsLeft);
+				questions -= 1;
+				var questionsLeft = ' [' + questions + ' questions left]';
+				var word2 = prompt('Please type another silly word:' + questionsLeft);
+				questions -= 1;
+				var questionsLeft = ' [' + questions + ' questions left]';
+				var name3 = prompt('Please type a name of a holiday:' + questionsLeft);
+				questions -= 1;
+				var questionsLeft = ' [' + questions + ' questions left]';
+				var name4 = prompt('Please type a name of a celebrity:' + questionsLeft);
+				questions -= 1;
+				var questionsLeft = ' [' + questions + ' questions left]';
+				var movie = prompt('Please type a movie title:' + questionsLeft);
+				questions -= 1;
+				var questionsLeft = ' [' + questions + ' questions left]';
+				var verb = prompt('Please type a verb ending in -ing:' + questionsLeft);
+				questions -= 1;
+				var questionsLeft = ' [' + questions + ' questions left]';
+				var number2 = prompt('Please type an amount of distance (ex. 2 feet or 3 meters):' + questionsLeft);
+				questions -= 1;
+				var questionsLeft = ' [' + questions + ' questions left]';
+				var country = prompt('Please type a country:' + questionsLeft);
+				questions -= 1;
+				var questionsLeft = ' [' + questions + ' questions left]';
+				var object2 = prompt('Please type an object:' + questionsLeft);
+				questions -= 1;
+				var questionsLeft = ' [' + questions + ' questions left]';
+				var occupation = prompt('Please type an occupation:' + questionsLeft);
+				questions -= 1;
+				var questionsLeft = ' [' + questions + ' questions left]';
+				var animal = prompt('Please type an animal:' + questionsLeft);
+				questions -= 1;
+				var questionsLeft = ' [' + questions + ' questions left]';
+				var quote = prompt('Please type a famous movie quote:' + questionsLeft);
+				questions -= 1;
+				var questionsLeft = ' [' + questions + ' questions left]';
+				var bodypart2 = prompt('Please type another body part:' + questionsLeft);
+				alert('All done. Ready for the message?');
+
+
+
+				var scene = '<p> DETECTIVE: Hello. I’m Detective <strong>' + name + '</strong> And, you are…<br><br>';
+				scene += 'SUSPECT: <strong>' + word + '</strong>.<br><br>';
+				scene += 'DETECTIVE: You are here today under suspicion of second degree robbery.<br><br>';
+				scene += 'SUSPECT: <strong>' + exclamation + '</strong>!<br><br>';
+				scene += 'DETECTIVE: That’s right. <strong>' + number + '</strong> <strong>' + object + '</strong> were stolen from <strong>' + name2 + '</strong> and the crime scene has your <strong>' + bodypart + '</strong> written ALL over it.<br><br>';
+				scene += 'SUSPECT: That is <strong>' + word2 + '</strong>.<br><br>';
+				scene += 'DETECTIVE: Where were you on the night of <strong>' + name3 + '</strong>?<br><br>';
+				scene += 'SUSPECT: I was with <strong>' + name4 + '</strong>. We were watching the movie "<strong>' + movie + '</strong>".<br><br>';
+				scene += 'DETECTIVE: Then why does security camera footage show you <strong>' + verb + '</strong> just <strong>' + number2 + '</strong> away from the crime scene?<br><br>';
+				scene += 'SUSPECT: That’s a coincidence.<br><br>';
+				scene += 'DETECTIVE: Alright, I’m through playing games. Where are you from?<br><br>';
+				scene += 'SUSPECT: <strong>' + country + '</strong>.<br><br>';
+				scene += 'DETECTIVE: What did your parents do for a living?<br><br>';
+				scene += 'SUSPECT: My father was a <strong>' + object2 + '</strong> salesman and my mother was a <strong>' + occupation + '</strong>.<br><br>';
+				scene += 'DETECTIVE: Did they teach you to steal?<br><br>';
+				scene += 'SUSPECT: No. I told you. I didn’t do it!<br><br>';
+				scene += 'DETECTIVE: That’s enough! One of the best parts about being a detective is that I get to lock up criminals like you, and go home to my children and my pet <strong>' + animal + '</strong> and say, <strong>' + quote + '</strong>.<br><br>';
+				scene += ' Fine, I did it. I committed the robbery. But I only did it because I needed the money to buy myself <strong>' + bodypart2 + '</strong> implants.<br><br>';
+				scene += 'DETECTIVE: I knew it all along.</p>';
+				document.write(scene);
+
+			</script>
+		</div>
+	</body>
+</html>
