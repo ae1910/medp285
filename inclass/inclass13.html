@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>In Class Assignment 13</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<style>
+			body{
+				width: 75%;
+				margin: 40px auto;
+			}
+			.wrapper {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				grid-template-rows: 100px 100px;
+				grid-gap: 5px;
+				background-color: #fff;
+				color: #444;
+			}
+			h1{
+				font-size: 1.80em;
+			}
+			.box1 {
+				background-color: #555;
+				color: red;
+				border-radius: 2.5px;
+				padding: 10px;
+				font-size: 1.5em;
+			}
+			.box2 {
+				background-color: red;
+				color: yellow;
+				border-radius: 2.5px;
+				padding: 10px;
+				font-size: 1.5em;
+			}
+			.box3 {
+				background-color: yellow;
+				color: purple;
+				border-radius: 2.5px;
+				padding: 10px;
+				font-size: 1.5em;
+			}
+			.box4 {
+				background-color: purple;
+				color: #9ccc65;
+				border-radius: 2.5px;
+				padding: 10px;
+				font-size: 1.5em;
+			}
+			.box5 {
+				background-color: #9ccc65;
+				color: #e03f3d;
+				border-radius: 2.5px;
+				padding: 10px;
+				font-size: 1.5em;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="wrapper">
+			<h1> In Class Assignment 13</h1>
+			<div class="box1" id="output"></div>
+			<div class="box2" id="output2"></div>
+			<div class="box3" id="output3"></div>
+			<div class="box4" id="output4"></div>
+			<div class="box5" id="output5"></div>
+		</div>
+		
+		<script type = "text/javascript">
+			let greeting = "Welcome All!"; //this is my text
+			
+			console.log(greeting); //outputting to the console
+			console.log('greetings'); //outputting a string to the console
+			console.log(13); //outputting an integer to the console
+			console.log('Woohoo! I love to code! #javascript');
+			console.log(6.13); //outputting a float value to the console
+
+			alert(greeting); //outputting to an alert window
+
+			document.getElementById('output').innerHTML = greeting; //outputting to a div in the body
+			document.getElementById('output2').innerHTML = 'greetings';
+			document.getElementById('output3').innerHTML = 13;
+			document.getElementById('output4').innerHTML = 'Woohoo! I love to code! #javascript';
+			document.getElementById('output5').innerHTML = 6.13;
+		</script>
+	</body>
+</html>
