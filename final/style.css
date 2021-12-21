@@ -1,112 +1,236 @@
 * {
 	margin: 0;
 	padding: 0;
+	overflow-x: hidden;
+}
+*::-webkit-scrollbar {
+    display: none;
 }
 body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
 	color: white;
-	background: linear-gradient(to top, rgb(0,0,0), rgb(2,9,15), rgb(11,26,30), rgb(22,38,45), rgb(44,67,82), rgb(44,104,127), transparent, transparent);
-}
-nav{
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	min-height: 8vh;
-	position: absolute;
-}
-.nav-links {
-	display: flex;
-	justify-content: space-around;
-	width: 85%;
-}
-.nav-links li {
-	list-style: none;
-}
-.nav-links a {
-	color: black;
-	text-decoration: none;
-	letter-spacing: 2px
-}
-.burger {
-	display: none;
-}
-.burger div{
-	width: 20px;
-	height: 3px;
-	background-color: black;
-	margin: 5px;
-}
-@media screen and (max-width: 1440px) {
-	.nav-links {
-		width: 100%;
-	}
-}
-@media screen and (max-width: 810px) {
-	body {
-		overflow-x: hidden;
-	}
-	.nav-links {
-		position: relative;
-		right: 0;
-		height: 98vh;
-		top: 8vh;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		transform: translateX(100);
-	}
+	background: linear-gradient(to top, rgb(0,0,0), rgb(2,9,15), rgb(11,26,30), rgb(22,38,45), rgb(44,67,82), rgb(44,104,127), rgb(132, 167, 176), transparent);
 }
 .container {
-	scroll-snap-type: y mandatory;
-	overflow-y: scroll;
 	width: 100%;
 	height: 100%;
 }
+
 section {
 	width: 100%;
 	height: 100vh;
-	scroll-snap-align: start;
 }
-section img {
+.hold {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow-y: hidden;
+}
+.sky, .topwater, .water1 {
 	position: absolute;
 	width: 100%;
 	height: 100vh;
 	object-fit: cover;
 	z-index: -3;
 }
+.block {
+	content: "";
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 150px;
+	background: rgb(132, 167, 176);
+}
 #start h1 {
 	position: absolute;
 	color: rgb(11,26,30);
-	top: 35%;
+	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -35%);
+	transform: translate(-50%, -50%);
 	font-size: 5.5rem;
 	text-align: center;
 	z-index: -2;
+	font-family: Cabin, sans-serif;
+	font-weight: 1000;
 }
 .topwater {
-	z-index: -1
+	z-index: -1;
+	position: fixed;
 }
-#zone1 {
+p {
+	margin: 1rem;
+	font-size: 1rem;
+}
+.heading{
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+.desc {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	font-family: Cabin, sans-serif;
+}
+.depth span {
+	font-size: 3rem
+}
+
+.fish {
+	position: absolute;
+}
+.orca {
+	height: 200px;
+	animation: animate 15s linear infinite;
+	position: absolute;
+	top: 30%;
+}
+.orca:hover {
+    animation-play-state: paused;
+ }
+.whshark {
+	height: 125px;
+	animation: animate 20s linear infinite;
+	position: absolute;
+	top: 50%;
+}
+.whshark:hover {
+    animation-play-state: paused;
+ }
+.sperm {
+	height: 500px;
+	animation: animate 25s linear infinite;
+	position: absolute;
+	top: 50%;
+}
+.sperm:hover {
+    animation-play-state: paused;
+ }
+.cusk {
+	height: 45px;
+	animation: animate 10s linear infinite;
+	position: absolute;
+	top: 80%;
+}
+.cusk:hover {
+    animation-play-state: paused;
+ }
+.jelly {
+	mix-blend-mode: screen;
+	height: 200px;
+	animation: animate 15s linear infinite;
+	position: absolute;
+	top: 30%;
+}
+.jelly:hover {
+    animation-play-state: paused;
+ }
+@keyframes animate {
+	0% {
+		transform: translateY(-50px);
+		left: 150%;
+	}
+	25% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(50px);
+	}
+	75% {
+		transform: translateY(0px);
+	}
+	100% {
+		transform: translateY(-50px);
+		left: -35%;
+	}
 	
 }
-/*#zone2 {
+
+.oarfish {
+	height: 400px;
+	animation: animate2 18s linear infinite;
+	position: absolute;
+	top: 10%;
+}
+.oarfish:hover {
+    animation-play-state: paused;
+ }
+.blue {
+	height: 250px;
+	animation: animate2 26s linear infinite;
+	position: absolute;
+	top: 35%;
+}
+.blue:hover {
+    animation-play-state: paused;
+ }
+.squid {
+	height: 100px;
+	animation: animate2 13s linear infinite;
+	position: absolute;
+	top: 50%;
+}
+.squid:hover {
+    animation-play-state: paused;
+ }
+.whitesh {
+	height: 200px;
+	animation: animate2 22s linear infinite;
+	position: absolute;
+	top: 10%;
+}
+.whitesh:hover {
+    animation-play-state: paused;
+ }
+.dragon {
+	height: 175px;
+	animation: animate2 10s linear infinite;
+	position: absolute;
+	top: 43%;
+}
+.dragon:hover {
+    animation-play-state: paused;
+ }
+.angler {
+	height: 100px;
+	animation: animate2 20s linear infinite;
+	position: absolute;
+	top: 25%;
+}
+.angler:hover {
+    animation-play-state: paused;
+ }
+.shrimp {
+	height: 25px;
+	animation: animate2 30s linear infinite;
+	position: absolute;
+	top: 60%;
+}
+.shrimp:hover {
+    animation-play-state: paused;
+ }
+@keyframes animate2 {
+	0% {
+		transform: translateY(-50px);
+		left: -35%;
+	}
+	25% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(50px);
+	}
+	75% {
+		transform: translateY(0px);
+	}
+	100% {
+		transform: translateY(-50px);
+		left: 150%;
+	}
 	
 }
-#zone3 {
-	
-}
-#zone4 {
-	
-}
-#zone5 {
-	
-}
-#below {
-	
-}*/
+
 #scrollup {
 	position: fixed; /*as it scrolls it will follow on top of all the content*/
 	right: 10px;
