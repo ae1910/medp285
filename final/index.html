@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Below the Horizon</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Web Production Work">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+		<link rel= "stylesheet" type="text/css" href= "style.css">
+	</head>
+
+
+	<body>
+		<!--<nav>
+			<ul class="nav-links">
+				<li><a href="#zone1">The Epipelagic Zone</a></li>
+				<li><a href="#zone2">The Mesopelagic Zone</a></li>
+				<li><a href="#zone3">The Bathypelagic Zone</a></li>
+				<li><a href="#zone4">The Abyssopelagic Zone</a></li>
+				<li><a href="#zone5">The Hadal Zone</a></li>
+				<li><a href="#below">???</a></li>
+			</ul>
+			<div class="burger">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+			</div>
+		</nav>-->
+		<div class="container">
+			<section id="start">
+				<img class="sky" src="img/part-01.png">
+				<h1 class="title">Below the Horizon</h1>
+				<img class="topwater" src="img/part-02.png">
+			</section>
+			<section id="zone1">
+				<img class="water1" src="img/part-03.png">
+				<p>
+					The Epipelagic Zone
+					<br>
+					0-200m (0-660ft)
+					<br>
+					Also known as the sunlight zone for its abundance of matural light, or the surface zone for its position at the surface level.
+				</p>
+			</section>
+			<section id="zone2">
+				<p>
+					The Mesopelagic Zone
+					<br>
+					200-1000m (660-3300ft)
+					<br>
+					Also known as the twilight zone or the midwater zone as sunlight this deep is very faint. Because of this, it is within this zone that bioluminescence - light created or emitted by a chemical reaction within a living organism - begins to appear on life.
+				</p>
+			</section>
+			<section id="zone3">
+				<p>
+					The Bathypelagic Zone
+					<br>
+					1,000-4,000m (3,300-13,100ft)
+					<br>
+					Also known as the midnight zone due to its constant darkness. The only light at this zone and lower comes from the bioluminescence of the animals themselves.
+				</p>
+			</section>
+			<section id="zone4">
+				<p>
+					The Abyssopelagic Zone
+					<br>
+					4,000-6,000m (13,100-19,700ft)
+					<br>
+					The pitch-black bottom layer of the ocean, with 3/4 of the area of the deep ocean floor is in this zone.
+				</p>
+			</section>
+			<section id="zone5">
+				<p>
+					The Hadal Zone
+					<br>
+					6,000-10,994m (19,700-36,070ft)
+					<br>
+					This is the deepest zone in the ocean, to the very bottom in the Mariana Trench off the coast of Japan.
+				</p>
+			</section>
+			<section id="below">
+				<p>
+					???
+					<br>
+					>10,994m (36,070ft)
+					<br>
+					More than 80% of the ocean has never been mapped, explored, or even seen by humans. American undersea explorer and buisnessman Victor Vescovo is said to be the human that has gone the deepest in the ocean ever recorded, at 10,927m (35,853ft) - well into the Challenger Deep (the deepest known point in the world's oceans) at the southern end of the Pacific Ocean's Mariana Trench.
+				</p>
+			</section>
+		</div>
+		<button id="scrollup">
+			<i class="material-icons">expand_less</i>
+		</button>
+
+
+		<script type="text/javascript">
+			let sky = document.querySelector(".sky");
+			let title = document.querySelector(".title");
+			let topwater = document.querySelector(".topwater");
+
+			window.addEventListener("scroll", function () {
+				let value = window.scrollY;
+				sky.style.bottom = value * 0.05 + "%";
+				title.style.bottom = value * 0.07 + "%";
+				topwater.style.bottom = value * 0.09 + "%";
+			})
+
+			const scrollup = document.querySelector("#scrollup"); //scroll to the top button animation
+
+			scrollup.addEventListener("click", function () { 
+				window.scrollTo({
+					top: 0,
+					left: 0,
+					behavior: "smooth"
+				});
+			});
+		</script>
+	</body>
+</html>
