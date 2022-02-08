@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+
+		<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+		<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
+		<title> Take My Money | HW</title>
+
+		<style>
+			html {
+			 	box-sizing: border-box;
+			}
+			*, *:before, *:after {
+				box-sizing: inherit;
+			}
+			body {
+				margin: 0;
+				padding: 0;
+				background: black;
+			}
+			#map {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				width: 100%;
+				z-index: 1;
+			}
+			.mapboxgl-popup {
+		        max-width: 400px;
+		        font: 1em/1.6em 'Verdana', sans-serif;
+		    }
+		    .title {
+		    	display: inline-block;
+		    	position: relative;
+		    	font: 1.6em 'Verdana', sans-serif;
+		    	margin: 10px;
+		    	padding: 15px 15px;
+		    	z-index: 2;
+		    	background: white;
+		    	border-radius: 10px;
+		    	color: #676767;
+		    	box-shadow: 0 0 11px rgba(33,33,33,.2);
+		    	vertical-align: middle;
+		    }
+		</style>
+	</head>
+	<body>
+		<div id='map'>
+			<h1 class="title">Food That Can Take My Money</h1>
+		</div>
+
+		<script>
+		  mapboxgl.accessToken = 'pk.eyJ1IjoiY2hvcmRhdGFtIiwiYSI6ImNremN1M3pmbjJyZWIzMW8yMTJhZ28wN3IifQ.hf67Vh2aLMQQt8em5aSutQ';
+		  var map = new mapboxgl.Map({
+		    container: 'map',
+		    style: 'mapbox://styles/mapbox/streets-v11',
+		    zoom: 11.75,
+			center: [-73.978, 40.765]
+		  });
+		  map.on('load', function() {
+		         map.addSource('places', {
+		             'type': 'geojson',
+		             'data': {
+		                 'type': 'FeatureCollection',
+		                 'features': [
+		                     {
+		                         'type': 'Feature',
+		                         'properties': {
+		                             'description':
+		                                 '<h2>375° Chicken &#39;n Fries</h2><p><img style= "width:100%" src="img/375chicken.jpg"><a href="http://www.375chicken.com/" target="_blank" title="Opens in a new window">375° Chicken n Fries</a> is a small brickwork fast food outlet serving fried chicken sandwiches, popcorn chicken, waffles & fries.</p>',
+		                             'icon': 'fast-food'
+		                         },
+		                         'geometry': {
+		                             'type': 'Point',
+		                             'coordinates': [-73.98847058539613, 40.719680252914266]
+		                         }
+		                     },
+		                     {
+		                         'type': 'Feature',
+		                         'properties': {
+		                             'description':
+		                                 '<h2>Let&#39;s Meat BBQ</h2><p><img style= "width:100%" src="img/meatbbq.jpg"><a href="https://www.letsmeatnyc.com/" target="_blank" title="Opens in a new window">Let&#39;s Meat BBQ</a> is a all-you-can-eat Korean BBQ, plus soju & imported beers in a roomy, modern space with table grills.</p>',
+		                             'icon': 'restaurant'
+		                         },
+		                         'geometry': {
+		                             'type': 'Point',
+		                             'coordinates': [-73.98554899335787, 40.74668856368049]
+		                         }
+		                     },
+		                     {
+		                         'type': 'Feature',
+		                         'properties': {
+		                             'description':
+		                                 '<h2>Baekjeong NYC</h2><p><img style= "width:100%" src="img/baekjeong.jpg"><a href="http://www.baekjeongnyc.com/" target="_blank" title="Opens in a new window">Baekjeong NYC</a> is a branch of a South Korea-based chain that offers table-grilled Korean BBQ, plus noodles & cocktails.</p>',
+		                             'icon': 'restaurant'
+		                         },
+		                         'geometry': {
+		                             'type': 'Point',
+		                             'coordinates': [-73.98502126271242, 40.74710157815537]
+		                         }
+		                     },
+		                     {
+		                         'type': 'Feature',
+		                         'properties': {
+		                             'description':
+		                                 '<h2>Mister Dips</h2><p><img style= "width:100%" src="img/dips.jpg"><a href="http://misterdips.com/" target="_blank" title="Opens in a new window">Mister Dips</a> was born in 2016 within a retrofitted 1974 Airstream trailer parked at the William Vale hotel, that serves griddle burgers, waffle fries & seasonal Dariy Dips soft serve ice cream.</p>',
+		                             'icon': 'ice-cream'
+		                         },
+		                         'geometry': {
+		                             'type': 'Point',
+		                             'coordinates': [-73.9567689373818, 40.72252936677801]
+		                         }
+		                     },
+		                     {
+		                         'type': 'Feature',
+		                         'properties': {
+		                             'description':
+		                                 '<h2>Rao&#39;s</h2><p><img style= "width:100%" src="img/raos.jpg"><a href="http://www.raosrestaurants.com/" target="_blank" title="Opens in a new window">Rao&#39;s</a> is an Italian restaurant where VIPs fill the dining room of this 10-table Italian icon.</p>',
+		                             'icon': 'restaurant'
+		                         },
+		                         'geometry': {
+		                             'type': 'Point',
+		                             'coordinates': [-73.9342503345614, 40.793909416848145]
+		                         }
+		                     },
+		                     {
+		                         'type': 'Feature',
+		                         'properties': {
+		                             'description':
+		                                 '<h2>Tompkins Square Bagels</h2><p><img style= "width:100%" src="img/bagels.jpg"><a href="http://tompkinssquarebagels.com/" target="_blank" title="Opens in a new window">Tompkins Square Bagels</a> is a bagel shop with hand-rolled bagels, sandwiches, pastries & coffee offered in a hip, brick-walled space with seating.</p>',
+		                             'icon': 'fast-food'
+		                         },
+		                         'geometry': {
+		                             'type': 'Point',
+		                             'coordinates': [-73.98216978997048, 40.72820081482853]
+		                         }
+		                     },
+		                     {
+		                         'type': 'Feature',
+		                         'properties': {
+		                             'description':
+		                                 '<h2>Vanessa&#39;s Dumpling House</h2><p><img style= "width:100%" src="img/dumpling.jpg"><a href="https://vanessas.com/" target="_blank" title="Opens in a new window">Vanessa&#39;s Dumpling House</a> is a restaurant that specializes in Chinese snacks such as hand-made dumplings, buns, sesame pancakes, and noodles.</p>',
+		                             'icon': 'restaurant'
+		                         },
+		                         'geometry': {
+		                             'type': 'Point',
+		                             'coordinates': [-73.99178049000405, 40.7183242330843]
+		                         }
+		                     },
+		                     {
+		                         'type': 'Feature',
+		                         'properties': {
+		                             'description':
+		                                 '<h2>Carbone</h2><p><img style= "width:100%" src="img/carbone.jpg"><a href="http://carbonenewyork.com/" target="_blank" title="Opens in a new window">Carbone</a> is an A-lister Italian restaurant in a reto-glam space where high-end takes on red-sauce fare.</p>',
+		                             'icon': 'restaurant'
+		                         },
+		                         'geometry': {
+		                             'type': 'Point',
+		                             'coordinates': [-74.00021572660626, 40.72799063840350]
+		                         }
+		                     },
+		                     {
+		                         'type': 'Feature',
+		                         'properties': {
+		                             'description':
+		                                 '<h2>Bareburger</h2><p><img style= "width:100%" src="img/bare.jpg"><a href="https://www.bareburger.com/" target="_blank" title="Opens in a new window">Bareburger</a> is a casual, eco-minded regional chain for organic burgers (from beef to bison) & more, plus beer & wine.</p>',
+		                             'icon': 'fast-food'
+		                         },
+		                         'geometry': {
+		                             'type': 'Point',
+		                             'coordinates': [-73.96620310843248, 40.794369674610536]
+		                         }
+		                     },
+		                     {
+		                         'type': 'Feature',
+		                         'properties': {
+		                             'description':
+		                                 '<h2>DORADO Tacos & Quesadillas</h2><p><img style= "width:100%" src="img/dorado.jpg"><a href="http://doradotacos.com/" target="_blank" title="Opens in a new window">DORADO Tacos & Quesadillas</a> is a counter-service Mexican eatery serving fish tacos & other Baja-style fare in a tiny, low-key space.</p>',
+		                             'icon': 'restaurant'
+		                         },
+		                         'geometry': {
+		                             'type': 'Point',
+		                             'coordinates': [-73.99313867617492, 40.73396436854078]
+		                         }
+		                     },
+		                         {
+		                         'type': 'Feature',
+		                         'properties': {
+		                             'description':
+		                                 '<h2>AweSum DimSum</h2><p><img style= "width:100%" src="img/dimsum.jpg"><a href="http://www.awesumdimsum.us/" target="_blank" title="Opens in a new window">AweSum DimSum</a> is a traditional Cantonese dish and refers to small, bite-sized portions served in bamboo steam baskets.</p>',
+		                             'icon': 'restaurant'
+		                         },
+		                         'geometry': {
+		                             'type': 'Point',
+		                             'coordinates': [-73.99072858303181, 40.75566397101045]
+		                         }
+		                     }
+		                 ]
+		             }
+		         });
+		         // Add a layer showing the places.
+		         map.addLayer({
+		             'id': 'places',
+		             'type': 'symbol',
+		             'source': 'places',
+		             'layout': {
+		                 'icon-image': '{icon}-15',
+		                 'icon-allow-overlap': true
+		             }
+		         });
+
+		         // When a click event occurs on a feature in the places layer, open a popup at the
+		         // location of the feature, with description HTML from its properties.
+		         map.on('click', 'places', function(e) {
+		             var coordinates = e.features[0].geometry.coordinates.slice();
+		             var description = e.features[0].properties.description;
+
+		             // Ensure that if the map is zoomed out such that multiple
+		             // copies of the feature are visible, the popup appears
+		             // over the copy being pointed to.
+		             while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+		                 coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+		             }
+
+		             new mapboxgl.Popup()
+		                 .setLngLat(coordinates)
+		                 .setHTML(description)
+		                 .addTo(map);
+		         });
+
+		         // Change the cursor to a pointer when the mouse is over the places layer.
+		         map.on('mouseenter', 'places', function() {
+		             map.getCanvas().style.cursor = 'pointer';
+		         });
+
+		         // Change it back to a pointer when it leaves.
+		         map.on('mouseleave', 'places', function() {
+		             map.getCanvas().style.cursor = '';
+		         });
+		     });
+		</script>
+	</body>
+</html>
