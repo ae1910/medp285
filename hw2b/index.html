@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Spotify Inspired Music Player</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="top">
+				<p class="top1">FROM THE ALBUM</p>
+				<p class="top2">Thriller</p>
+			</div>
+			<img class="cover" src="img/cover.jpg">
+			<div class="details">
+				<p class="name">Wanna Be Startin' Somethin'</p>
+				<p class="artist">Michael Jackson</p>
+			</div>
+			<div id="progressholder">
+				<div id="progress">
+					<audio id="player" src="audio/Wanna.mp3" loop="false" type="audio/mp3">
+					</audio>
+				</div>
+				<div class="timer">
+					<span class="current-time">0:00</span>
+					<span class="end-time">6:05</span>
+				</div>
+			</div>
+			<div class="controls">
+				<i id="beginning" class="material-icons">skip_previous</i>
+				<i id="back" class="material-icons">replay_10</i>
+				<i id="play-btn" class="material-icons">play_circle_filled</i>
+				<i id="next" class="material-icons">forward_10</i>
+				<i id="loop" class="material-icons">repeat</i>
+			</div>
+		</div>
+
+		<script src="js/script.js" type="text/javascript"></script>
+	</body>
+</html>

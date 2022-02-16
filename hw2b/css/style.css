@@ -1,0 +1,139 @@
+html {
+ 	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background: #000000;
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+}
+.container {
+	max-width: 380px;
+	width: 100%;
+	background: linear-gradient(#809698, #809698, #131616);
+	padding: 10px 30px;
+	border-radius: 12.5px;
+	box-shadow: 0 5px 25px rgb(0 0 0 / 15%);
+	display: flex;
+	flex-flow: column;
+}
+i {
+	cursor: pointer;
+}
+p {
+	margin: 5px;
+}
+.top {
+	text-align: center;
+	margin-bottom: 30px;
+}
+.top .top1, .top .top2{
+	font-size: 0.7em;
+	line-height: 0.9em;
+}
+.top .top1 {
+	letter-spacing: 1.5px;
+	font-weight: 200;
+}
+.top .top2 {
+	font-weight: 500;
+}
+.cover {
+	width: 100%;
+	border-radius: 8px;
+	box-shadow: 0s 5px 25px rgb(0 0 0 / 15%);
+	margin-bottom: 25.5px;
+}
+.details {
+	text-align: center;
+	margin-bottom: 16px;
+}
+.details .name {
+	font-size: 1.3em;
+	letter-spacing: 0.5px;
+	font-weight: 500;
+	line-height: 1.3em;
+}
+.details .artist {
+	font-size: 1em;
+	font-weight: 400;
+	color: #B8B8B8;
+	line-height: 1em;
+}
+#progressholder {
+	background: #B8B8B8;
+	margin: 10px 0;
+	height: 5px;
+	border-radius: 2.5px;
+	width: 100%;
+	cursor: pointer;
+}
+#progress {
+	background-color: white;
+	border-radius: inherit;
+	height: inherit;
+	position: relative;
+	width: 0%;
+}
+#progress-bar::before{
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  top: 50%;
+  right: -5px;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%);
+  background: inherit;
+  transition: opacity 0.2s ease;
+}
+#progress-area:hover #progress-bar::before{
+  opacity: 1;
+  pointer-events: auto;
+}
+.timer {
+	margin: 5px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.timer span {
+	font-size: 0.8em;
+	font-weight: 400;
+	color: #B8B8B8;
+	line-height: 1em;
+}
+.controls {
+	display: flex;
+	flex-wrap: none;
+	align-items: center;
+	justify-content: space-between;
+	margin: 5px 0 35px 0;
+}
+.controls i {
+	font-size: 35px;
+	user-select: none;
+}
+#play-btn {
+	font-size: 53px;
+	line-height: 50px;
+}
+#beginning, #loop {
+	font-size: 27px;
+}
+#loop {
+	color: #B8B8B8;
+}
