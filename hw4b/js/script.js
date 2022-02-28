@@ -43,6 +43,10 @@ function getInputValue(){
 			r = randomNum(15, 256);
 			g = 0;
 			b = 0;
+			header.style.color = 'white';
+			nPara.style.color = 'white';
+			hex.style.color = 'white';
+			rgb.style.color = 'white';
 			document.body.style.backgroundColor = "rgb" + "(" + r + ", " + g + ", " + b + ")";
 			break;
 		case 'orange':
@@ -88,6 +92,10 @@ function getInputValue(){
 			r = 0;
 			g = randomNum(15, 256);
 			b = 0;
+			header.style.color = 'white';
+			nPara.style.color = 'white';
+			hex.style.color = 'white';
+			rgb.style.color = 'white';
 			document.body.style.backgroundColor = "rgb" + "(" + r + ", " + g + ", " + b + ")";
 			break;
 		case 'blue':
@@ -96,6 +104,10 @@ function getInputValue(){
 			g = 0;
 			b = randomNum(15, 256);
 			document.body.style.backgroundColor = "rgb" + "(" + r + ", " + g + ", " + b + ")";
+			header.style.color = 'white';
+			nPara.style.color = 'white';
+			hex.style.color = 'white';
+			rgb.style.color = 'white';
 			break;
 		case 'purple':
 		case 'Purple':
@@ -143,6 +155,10 @@ function getInputValue(){
 			g = randomNum(0, 15);
 			b = randomNum(0, 15);
 			document.body.style.backgroundColor = "rgb" + "(" + r + ", " + g + ", " + b + ")";
+			header.style.color = "white";
+			nPara.style.color = "white";
+			hex.style.color = "white";
+			rgb.style.color = "white";
 			break;
 		case 'white':
 		case 'White':
