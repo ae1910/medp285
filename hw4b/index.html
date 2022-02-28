@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Color Generator</title>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+
+	</head>
+
+	<body>
+		<div id="container">
+			<h1 class="header">Color Generator</h1>
+			<div class="wrap">
+				<div class="search">
+					<input type="text" placeholder="Pick a color..." id="myInput">
+					<button type="button" onclick="getInputValue();"><i><span class="material-icons">search</span></i></button>
+				</div>
+			</div>
+			<p class="para">If you want a different variation of the color, just search it again.</p>
+			<div id="colors">
+				<p id="hex">HEX: #000000</p>
+				<p id="rgbs">RGB: 0, 0, 0</p>
+			</div>
+		</div>
+
+
+		<script src="js/script.js" type="text/javascript"></script>
+	</body>
+</html>
