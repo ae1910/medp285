@@ -43,7 +43,7 @@ function myfunction(ctrl) {
       objects.onload = function() {
         let data2 = JSON.parse(this.response);
         if (objects.status >= 200 && objects.status < 400) {
-          let first10 = data2.objectIDs.slice(0, 90);
+          let first10 = data2.objectIDs.slice(0, 960);
           first10.forEach(objs => {
 
             let object  = new XMLHttpRequest(); 
